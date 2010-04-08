@@ -42,9 +42,10 @@ The reader should:
   computing environment.  The research will discuss various performance costs
   and benefits in relation to traditional notebooks, netbooks, and smart-phones.
 
-\item a cursory understanding of software testing.  Some of the procedures I
-  will be using will center around automating the testing of various aspects of
-  computer performance on various mobile platforms as well as in the cloud.
+\item a cursory understanding of software testing.  Some of the procedures the
+  researcher will be using will center around automating the testing of various
+  aspects of computer performance on various mobile platforms as well as in the
+  cloud.
 
 \end{itemize}
 
@@ -198,7 +199,7 @@ Equipment needed to reconduct my study would be
     Model                        & Acer Aspire one V1.07 \\ \hline
     Enclosure Type               & Notebook \\ \hline
     Operating System             & Windows XP Home Edition Service Pack 3 (build
-    2600) \\ \hline
+                                   2600) \\ \hline
     Processor Name               & Intel Atom N270 \\ \hline
     Processor Speed              & 1.60 GHz \\ \hline
     Number of Processors         & 1 \\ \hline
@@ -245,14 +246,98 @@ system monitoring applications of the respective operating systems.
 
 \section{Procedure/Methodology}
 
-%Expected recipe
+\subsection{Performance Testing}
 
-\subsection{Specific procedure used to answer the problem}
+\subsubsection{Methodology}
+
+The steps taken by the researcher to test performance are the following:
+
+\begin{enumerate}
+
+\item Create a source CSV file with 10,000 random numbers between -1 and 1.
+
+\item Create a new spreadsheet based on the CSV file.
+
+\item Create a new column and fill with the function =An*10+1 where n is the
+  current row.
+
+\item Create a new column and fill with the function =MEDIAN(B1:Bn) where n is
+  the current row.
+
+\item Create a new column and enter 1-100 in the first hundred rows.
+
+\item Create a new column and fill with the function =Dn/100 wher n is the
+  current row.
+
+\item Create a new column and fill with the function =PERCENTILE(C1:C10004,En)
+  where n is the current row.
+
+\item Change an A column cell.
+
+\end{enumerate}
+
+%Expected recipe
 
 The researcher used the following Groovy script to generate the random numbers
 used to seed the functions of the spreadsheet:
 
 \lstinputlisting[frame=single,breaklines]{../randomSourceGen.groovy}
+
+\subsubsection{MacBook/Chrome Performance}
+
+Creation of the spreadsheet from the source file took an average of 18 seconds
+based on ten trial uploads on the MacBook in Google Chrome:
+
+\begin{tabular}{| c | l |}
+  \hline
+  Run  & Time \\ \hline
+  1    & 18   \\ \hline
+  2    & 12   \\ \hline
+  3    & 20   \\ \hline
+  4    & 15   \\ \hline
+  5    & 21   \\ \hline
+  6    & 18   \\ \hline
+  7    & 19   \\ \hline
+  8    & 18   \\ \hline
+  9    & 20   \\ \hline
+  10   & 18   \\ \hline
+       & 17.9 \\
+  \hline
+\end{tabular}
+
+Creation of the second column took an average of 7 seconds
+
+\begin{tabular}{| c | l |}
+  \hline
+  Run  & Time \\ \hline
+  1    & 6    \\ \hline
+  2    & 9    \\ \hline
+  3    & 9    \\ \hline
+  4    & 5    \\ \hline
+  5    & 7    \\ \hline
+  6    & 7    \\ \hline
+  7    & 5    \\ \hline
+  8    & 7    \\ \hline
+  9    & 6    \\ \hline
+  10   & 7    \\ \hline
+       & 6.8  \\
+  \hline
+\end{tabular}
+
+The third column took significantly longer, and often had to be cancelled
+alltogether.  The problem seemed to be filling the formula down on the entire
+column.  Google Spreadsheet 
+
+%Insert table of data
+
+%Insert rest of formatted data (percentile performance measures)
+
+\subsubsection{MacBook/OpenOffice.org Performance}
+
+\subsubsection{ASPIRE one/Chrome Performance}
+
+\subsubsection{ASPIRE one/OpenOffice.org Performance}  
+
 \section{Delimitations}
 
 %Suggestions for future research?
@@ -267,12 +352,18 @@ adoption.
 
 \section{Results}
 
-\subsection{In general, what was found? What happened?}
+In general, the researcher was amazed to find that Google Docs is virtually
+unusable in it's present form.  While taking on almost no CPU usage locally at
+all, it still took large amounts of time to enter formulas and calculate their
+values for a relatively small set (10,000) of data points.  Compared to
+OpenOffice.org on either platform, this was extremely slow.  Interestingly
+enough, CPU and Banddwidth did not seem to play a factor in Google Docs
+performance.  The researcher's only guess is that the way they allocate
+computing resources at Google is quite limiting in power.
 
-\subsection{Data provided to justify statements or major trends?}
-
-\subsection{Reliability of the results?}
-
-\subsection{How was reliability demonstrated?}
+These results are not very arbitrary but there is some observation in there
+which means that everyone will come up with slightly different results.  The
+results are demonstrated for verification by the tables of performance data
+included in this text.
 
 \end{document}
