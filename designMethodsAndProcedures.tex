@@ -5,6 +5,7 @@
 \usepackage[colorlinks=true]{hyperref}
 \usepackage{paralist}
 \usepackage{listings}
+\lstset{basicstyle=\small}
 
 \begin{document}
 
@@ -251,31 +252,7 @@ system monitoring applications of the respective operating systems.
 The researcher used the following Groovy script to generate the random numbers
 used to seed the functions of the spreadsheet:
 
-\lstset{basicstyle=\small}
-\begin{lstlisting}[frame=single,breaklines]
-  file = new File('/Users/tim/Documents/CMSCU 498/Research Paper/'+args[0]+'.csv')
-
-  while (950 > file.length() / 1000) {
-      def random = Math.random()
-      if (0.5 >= Math.random()) {
-          random *= -1
-      }
-      file.append(random+'\n')
-  }
-\end{lstlisting}
-
-\subsection{Information necessary to exactly replicate the study with respect to the procedure}
-
-\subsection{Procedures used to deal with unavoidable problems}
-
-\subsection{Information necessary to realize inability to generalize because of some special property of the procedure}
-
-\subsection{Was a baseline obtained or were the groups equal at the start?}
-
-\subsection{How were the independent variables measured?}
-
-\subsection{How were the dependent variables measured}
-
+\lstinputlisting[frame=single,breaklines]{../randomSourceGen.groovy}
 \section{Delimitations}
 
 %Suggestions for future research?
