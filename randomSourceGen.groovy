@@ -1,9 +1,25 @@
-file = new File(args[0] + '.csv')
+def prefix = 'randomSource'
+def extension = '.csv'
 
-while (200 >= file.size() / 1000) {
-    def random = Math.random()
-    if (0.5 >= Math.random()) {
-        random *= -1
+file = new File(prefix + extension)
+
+if (file.exists()) {
+    def backupFile = new File(prefix + ".prev" + extension)
+    backupFile.withWriter { writer ->
+        file.eachLine() {
+            writer.writeLine(it)
+        }
     }
-    file.append(random+'\n')
+}
+
+//200 equals approximately 10000 lines
+goalSize = 200*args[0].toDouble()
+file.withWriter { writer ->
+    while (goalSize >= file.size() / 1000) {
+        def random = Math.random()
+        if (0.5 >= Math.random()) {
+            random *= -1
+        }
+        writer.writeLine(random.toString())
+    }
 }
