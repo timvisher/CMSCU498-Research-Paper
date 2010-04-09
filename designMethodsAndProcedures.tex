@@ -151,11 +151,11 @@ the researcher to accomplish and therefore is a necessary shortcoming.
 
 Equipment needed to reconduct my study would be
 \begin{inparaenum}[(1)]
-\item A Macbook;
+\item A MacBook;
 \item An acer ASPIRE one;
 \item Several Browsers;
 \item OpenOffice.org;
-\item The testing SpreadSheet.
+\item The testing Spreadsheet.
 \end{inparaenum}
 
 \begin{enumerate}
@@ -229,8 +229,8 @@ Equipment needed to reconduct my study would be
 
 \item A Google account with access to Google Docs for spreadsheet analysis.
 
-\item The SpreadSheet.\footnote{SpreadSheet published here:
-  \url{https://spreadsheets.google.com/ccc?key=0Ar8ZDnsVfQzLdDh2MjhfU1JoOExLejlMTHpjY1NrdWc&hl=en}}
+\item The Spreadsheet.\footnote{Spreadsheet published here:
+  \url{j.mp/cmscu498GSs}}
 
 \item A clock or stopwatch to measure performance.
 
@@ -250,11 +250,13 @@ system monitoring applications of the respective operating systems.
 
 \subsubsection{Methodology}
 
+%Expected recipe
+
 The steps taken by the researcher to test performance are the following:
 
 \begin{enumerate}
 
-\item Create a source CSV file with 10,000 random numbers between -1 and 1.
+\item Create a source CSV file with ~3,000 random numbers between -1 and 1.
 
 \item Create a new spreadsheet based on the CSV file.
 
@@ -266,7 +268,7 @@ The steps taken by the researcher to test performance are the following:
 
 \item Create a new column and enter 1-100 in the first hundred rows.
 
-\item Create a new column and fill with the function =Dn/100 wher n is the
+\item Create a new column and fill with the function =Dn/100 where n is the
   current row.
 
 \item Create a new column and fill with the function =PERCENTILE(C1:C10004,En)
@@ -276,71 +278,192 @@ The steps taken by the researcher to test performance are the following:
 
 \end{enumerate}
 
-%Expected recipe
-
-The researcher used the following Groovy script to generate the random numbers
-used to seed the functions of the spreadsheet:
+The researcher used the following Groovy script with the argument .25 to
+generate the random numbers used to seed the functions of the spreadsheet:
 
 \lstinputlisting[frame=single,breaklines]{../randomSourceGen.groovy}
 
 \subsubsection{MacBook/Chrome Performance}
 
-Creation of the spreadsheet from the source file took an average of 18 seconds
+Creation of the spreadsheet from the source file took an average of 6 seconds
 based on ten trial uploads on the MacBook in Google Chrome:
 
 \begin{tabular}{| c | l |}
   \hline
   Run  & Time \\ \hline
-  1    & 18   \\ \hline
-  2    & 12   \\ \hline
-  3    & 20   \\ \hline
-  4    & 15   \\ \hline
-  5    & 21   \\ \hline
-  6    & 18   \\ \hline
-  7    & 19   \\ \hline
-  8    & 18   \\ \hline
-  9    & 20   \\ \hline
-  10   & 18   \\ \hline
-       & 17.9 \\
+  1    & 8    \\ \hline
+  2    & 7    \\ \hline
+  3    & 5    \\ \hline
+  4    & 6    \\ \hline
+  5    & 6    \\ \hline
+  6    & 4    \\ \hline
+  7    & 5    \\ \hline
+  8    & 6    \\ \hline
+  9    & 6    \\ \hline
+  10   & 7    \\ \hline
+       & 6    \\
   \hline
 \end{tabular}
 
-Creation of the second column took an average of 7 seconds
+Creation of the second column took an average of 3 seconds
 
 \begin{tabular}{| c | l |}
   \hline
   Run  & Time \\ \hline
-  1    & 6    \\ \hline
-  2    & 9    \\ \hline
-  3    & 9    \\ \hline
-  4    & 5    \\ \hline
+  1    & 2    \\ \hline
+  2    & 3    \\ \hline
+  3    & 4    \\ \hline
+  4    & 3    \\ \hline
+  5    & 2    \\ \hline
+  6    & 5    \\ \hline
+  7    & 2    \\ \hline
+  8    & 2    \\ \hline
+  9    & 3    \\ \hline
+  10   & 3    \\ \hline
+       & 2.9  \\
+  \hline
+\end{tabular}
+
+The third column took significantly longer, averaging 25 seconds.
+
+\begin{tabular}{| c | l |}
+  \hline
+  Run  & Time \\ \hline
+  1    & 30   \\ \hline
+  2    & 17   \\ \hline
+  3    & 24   \\ \hline
+  4    & 23   \\ \hline
+  5    & 29   \\ \hline
+  6    & 28   \\ \hline
+  7    & 30   \\ \hline
+  8    & 19   \\ \hline
+  9    & 20   \\ \hline
+  10   & 23   \\ \hline
+       & 24.3 \\
+  \hline
+\end{tabular}
+
+The problem seemed to be filling the formula down on the entire column.  Google
+Spreadsheet appears to be unable to handle large column selections without
+freezing.  The researcher was unable to ascertain why this would be.  No CPU
+usage of note was observed and no network traffic to speak of.  On occasion
+after half an hour or so the page would refresh and the data would be there, but
+more often than not it simply would never show up.
+
+Creating the 3 columns needed to calculate percentiles was uninteresting.  Each
+task averaged less than 1 second over 10 runs.
+
+\subsubsection{ASPIRE one/Chrome Performance}
+
+As was expected, performance was extremely comparable on the ASPIRE one when
+using Chrome.
+
+The first column:
+
+\begin{tabular}{| c | l |}
+  \hline
+  Run  & Time \\ \hline
+  1    & 8    \\ \hline
+  2    & 7    \\ \hline
+  3    & 5    \\ \hline
+  4    & 6    \\ \hline
   5    & 7    \\ \hline
-  6    & 7    \\ \hline
-  7    & 5    \\ \hline
-  8    & 7    \\ \hline
+  6    & 9    \\ \hline
+  7    & 3    \\ \hline
+  8    & 10   \\ \hline
   9    & 6    \\ \hline
   10   & 7    \\ \hline
        & 6.8  \\
   \hline
 \end{tabular}
 
-The third column took significantly longer, and often had to be cancelled
-alltogether.  The problem seemed to be filling the formula down on the entire
-column.  Google Spreadsheet 
+The second:
 
-%Insert table of data
+\begin{tabular}{| c | l |}
+  \hline
+  Run  & Time \\ \hline
+  1    & 2    \\ \hline
+  2    & 3    \\ \hline
+  3    & 2    \\ \hline
+  4    & 3    \\ \hline
+  5    & 4    \\ \hline
+  6    & 5    \\ \hline
+  7    & 2    \\ \hline
+  8    & 3    \\ \hline
+  9    & 3    \\ \hline
+  10   & 4    \\ \hline
+       & 3.1  \\
+  \hline
+\end{tabular}
 
-%Insert rest of formatted data (percentile performance measures)
+The third:
 
-\subsubsection{MacBook/OpenOffice.org Performance}
+\begin{tabular}{| c | l |}
+  \hline
+  Run  & Time \\ \hline
+  1    & 17   \\ \hline
+  2    & 30   \\ \hline
+  3    & 23   \\ \hline
+  4    & 30   \\ \hline
+  5    & 20   \\ \hline
+  6    & 24   \\ \hline
+  7    & 29   \\ \hline
+  8    & 22   \\ \hline
+  9    & 30   \\ \hline
+  10   & 23   \\ \hline
+       & 24.8 \\
+  \hline
+\end{tabular}
 
-\subsubsection{ASPIRE one/Chrome Performance}
+Creating the 3 columns needed to calculate percentiles remained uninteresting.
 
-\subsubsection{ASPIRE one/OpenOffice.org Performance}  
+As an aside: while no significant difference at all was observed between the
+two platforms' ability to compute the calculations demanded by the spreadsheet,
+significant differences were observed in the performance associated with
+changing the display of the data.  It appears that Google offloads most of the
+data into memory and relies on local calculations to redisplay the data in the
+window.  With the weaker CPU and Memory set, the Netbook saw performance losses
+due to that.
+
+\subsubsection{OpenOffice.org Performance}
+
+At the sampling size Google Docs could handle before becoming unusable, creating
+each of the columns of the Spreadsheet was instantaneous \emph{on both
+  platforms}.  This was very surprising to the researcher although in retrospect
+it should not have been.  At that sample size, no local spreadsheet system has
+issues.  The researcher obtained a much larger spreadsheet\footnote{A testing
+  spreadsheet for use with OpenOffice.org bug 89976
+  \url{http://j.mp/cmscu498OOoSs}} which alowed a much closer comparison of the
+two platforms and as expected the netbook performed far worse than the notebook;
+actually an \emph{order of magnitude} worse.
+
+\begin{tabular}{| c | l | l |}
+  \hline
+  Run  & MacBook & ASPIRE one \\ \hline
+  1    & 134     & 1800       \\ \hline
+  2    & 129     & 1738       \\ \hline
+  3    & 144     & 1721       \\ \hline
+  4    & 111     & 1983       \\ \hline
+  5    & 119     & 1699       \\ \hline
+  6    & 128     & 1738       \\ \hline
+  7    & 145     & 1715       \\ \hline
+  8    & 133     & 1817       \\ \hline
+  9    & 129     & 1876       \\ \hline
+  10   & 125     & 1743       \\ \hline
+       & 129.7   & 1783       \\
+  \hline
+\end{tabular}
 
 \section{Delimitations}
 
 %Suggestions for future research?
+
+Initially a much larger spreadsheet was desired but performance limits in Google
+Docs forbid this.  Unfortunately, that made comparison at the local level
+effectively moot as neither platform showed any difficulty at all in performing
+the various calculations while much larger samples (~65,000) would take upwards
+of 30 minutes to open and just as much time to recalculate if things were
+changed.  However, both systems had to be operating on the same data.
 
 Due to time constraints, the author cannot investigate the degree to which
 privacy concerns are affecting mobile platform adoption.  Certainly, concepts of
@@ -355,15 +478,15 @@ adoption.
 In general, the researcher was amazed to find that Google Docs is virtually
 unusable in it's present form.  While taking on almost no CPU usage locally at
 all, it still took large amounts of time to enter formulas and calculate their
-values for a relatively small set (10,000) of data points.  Compared to
+values for a relatively small set (3,000) of data points.  Compared to
 OpenOffice.org on either platform, this was extremely slow.  Interestingly
-enough, CPU and Banddwidth did not seem to play a factor in Google Docs
+enough, CPU and Bandwidth did not seem to play a factor in Google Docs
 performance.  The researcher's only guess is that the way they allocate
 computing resources at Google is quite limiting in power.
 
 These results are not very arbitrary but there is some observation in there
-which means that everyone will come up with slightly different results.  The
-results are demonstrated for verification by the tables of performance data
-included in this text.
+which means that future researchers will come up with slightly different
+results.  The results are demonstrated for verification by the tables of
+performance data included in this text.
 
 \end{document}

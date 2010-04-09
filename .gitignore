@@ -6,3 +6,4 @@
 build/
 distro/
 Handouts/
+*.prev.*
