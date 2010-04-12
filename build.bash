@@ -24,3 +24,8 @@ latex $TEX_FILE.tex
 pdflatex $TEX_FILE.tex
 mv $TEX_FILE.pdf ../
 
+#if [! -d ../../distro] ; then
+#    mkdir ../../distro
+#fi
+#
+#cp $TEX_FILE.pdf ../../distro
