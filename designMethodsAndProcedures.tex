@@ -270,73 +270,30 @@ generate the random numbers used to seed the functions of the spreadsheet:
 \subsection{MacBook/Chrome Performance}
 
 Creation of the spreadsheet from the source file took an average of 6 seconds
-based on ten trial uploads on the MacBook in Google Chrome:
+based on ten trial uploads on the MacBook in Google Chrome. Creation of the
+second column took an average of 3 seconds. The third column took significantly
+longer, averaging 25 seconds. Data can be found in table~\ref{mbChromePerf} on
+page~\pageref{mbChromePerf}.
 
 \begin{table}
-  \begin{tabular}{| c | l |}
+  \begin{tabular}{| c | l | l | l |}
     \hline
-    Run  & Time \\ \hline
-    1    & 8    \\ \hline
-    2    & 7    \\ \hline
-    3    & 5    \\ \hline
-    4    & 6    \\ \hline
-    5    & 6    \\ \hline
-    6    & 4    \\ \hline
-    7    & 5    \\ \hline
-    8    & 6    \\ \hline
-    9    & 6    \\ \hline
-    10   & 7    \\ \hline
-    & 6    \\
-    \hline
-  \end{tabular}
-  \caption{MacBook/Chrome Performance: Step One}
-  \label{mbChromePerf01}
-\end{table}
-
-Creation of the second column took an average of 3 seconds
-
-\begin{table}
-  \begin{tabular}{| c | l |}
-    \hline
-    Run  & Time \\ \hline
-    1    & 2    \\ \hline
-    2    & 3    \\ \hline
-    3    & 4    \\ \hline
-    4    & 3    \\ \hline
-    5    & 2    \\ \hline
-    6    & 5    \\ \hline
-    7    & 2    \\ \hline
-    8    & 2    \\ \hline
-    9    & 3    \\ \hline
-    10   & 3    \\ \hline
-    & 2.9  \\
+    Run      & Step 1 & Step 2 & Step 3 \\ \hline
+    1        & 8      & 2      & 30     \\ \hline
+    2        & 7      & 3      & 17     \\ \hline
+    3        & 5      & 4      & 24     \\ \hline
+    4        & 6      & 3      & 23     \\ \hline
+    5        & 6      & 2      & 29     \\ \hline
+    6        & 4      & 5      & 28     \\ \hline
+    7        & 5      & 2      & 30     \\ \hline
+    8        & 6      & 2      & 19     \\ \hline
+    9        & 6      & 3      & 20     \\ \hline
+    10       & 7      & 3      & 23     \\ \hline
+    Average  & 6      & 2.9    & 24.3   \\
     \hline
   \end{tabular}
-  \caption{MacBook/Chrome Performance: Step Two}
-  \label{mbChromePerf02}
-\end{table}
-
-The third column took significantly longer, averaging 25 seconds.
-
-\begin{table}
-  \begin{tabular}{| c | l |}
-    \hline
-    Run  & Time \\ \hline
-    1    & 30   \\ \hline
-    2    & 17   \\ \hline
-    3    & 24   \\ \hline
-    4    & 23   \\ \hline
-    5    & 29   \\ \hline
-    6    & 28   \\ \hline
-    7    & 30   \\ \hline
-    8    & 19   \\ \hline
-    9    & 20   \\ \hline
-    10   & 23   \\ \hline
-    & 24.3 \\
-    \hline
-  \end{tabular}
-  \caption{MacBook/Chrome Performance: Step Three}
-  \label{mbChromePerf03}
+  \caption{MacBook/Chrome Performance}
+  \label{mbChromePerf}
 \end{table}
 
 The problem seemed to be filling the formula down on the entire column.  Google
