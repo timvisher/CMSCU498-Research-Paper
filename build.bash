@@ -17,12 +17,16 @@ find . -name '*.groovy' -exec cp '{}' build/latex/ \;
 
 #LaTeX
 cd build/latex
-latex $TEX_FILE.tex
-latex $TEX_FILE.tex
+latex $TEX_FILE.tex 2>/dev/null
+latex $TEX_FILE.tex 2>/dev/null
 bibtex $TEX_FILE.aux
-latex $TEX_FILE.tex
+latex $TEX_FILE.tex 2>/dev/null
 pdflatex $TEX_FILE.tex
 mv $TEX_FILE.pdf ../
+
+if type open ; then
+    open ../$TEX_FILE.pdf;
+fi
 
 #if [! -d ../../distro] ; then
 #    mkdir ../../distro
