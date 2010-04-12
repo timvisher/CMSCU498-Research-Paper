@@ -262,10 +262,9 @@ The steps taken by the researcher to test performance are the following:
 
 \end{enumerate}
 
-The researcher used the following Groovy script with the argument .25 to
-generate the random numbers used to seed the functions of the spreadsheet:
-
-\lstinputlisting[frame=single,breaklines]{randomSourceGen.groovy}
+The researcher used a Groovy script with the argument .25 to generate the random
+numbers used to seed the functions of the spreadsheet.  For source
+see~\ref{randomSourceGen.groovy} in \ref{sourceCode}.
 
 \subsection{MacBook/Chrome Performance}
 
@@ -309,75 +308,27 @@ task averaged less than 1 second over 10 runs.
 \subsection{ASPIRE one/Chrome Performance}
 
 As was expected, performance was extremely comparable on the ASPIRE one when
-using Chrome.
-
-The first column:
+using Chrome. See table~\ref{aspChrPerf} on page~\pageref{aspChrPerf}
 
 \begin{table}
-  \begin{tabular}{| c | l |}
+  \begin{tabular}{| c | l | l | l |}
     \hline
-    Run  & Time \\ \hline
-    1    & 8    \\ \hline
-    2    & 7    \\ \hline
-    3    & 5    \\ \hline
-    4    & 6    \\ \hline
-    5    & 7    \\ \hline
-    6    & 9    \\ \hline
-    7    & 3    \\ \hline
-    8    & 10   \\ \hline
-    9    & 6    \\ \hline
-    10   & 7    \\ \hline
-    & 6.8  \\
+    Run          & Step 1 & Step 2 & Step 3 \\ \hline
+    1            & 8      & 2      & 17     \\ \hline
+    2            & 7      & 3      & 30     \\ \hline
+    3            & 5      & 2      & 23     \\ \hline
+    4            & 6      & 3      & 30     \\ \hline
+    5            & 7      & 4      & 20     \\ \hline
+    6            & 9      & 5      & 24     \\ \hline
+    7            & 3      & 2      & 29     \\ \hline
+    8            & 10     & 3      & 22     \\ \hline
+    9            & 6      & 3      & 30     \\ \hline
+    10           & 7      & 4      & 23     \\ \hline
+    Averages     & 6.8    & 3.1    & 24.8   \\
     \hline
   \end{tabular}
   \caption{acer ASPIRE one/Chrome Performance: Step One}
-  \label{aspChrPerf01}
-\end{table}
-
-The second:
-
-\begin{table}
-  \begin{tabular}{| c | l |}
-    \hline
-    Run  & Time \\ \hline
-    1    & 2    \\ \hline
-    2    & 3    \\ \hline
-    3    & 2    \\ \hline
-    4    & 3    \\ \hline
-    5    & 4    \\ \hline
-    6    & 5    \\ \hline
-    7    & 2    \\ \hline
-    8    & 3    \\ \hline
-    9    & 3    \\ \hline
-    10   & 4    \\ \hline
-    & 3.1  \\
-    \hline
-  \end{tabular}
-  \caption{acer ASPIRE one/Chrome Performance: Step Two}
-  \label{aspChrPerf02}
-\end{table}
-
-The third:
-
-\begin{table}
-  \begin{tabular}{| c | l |}
-    \hline
-    Run  & Time \\ \hline
-    1    & 17   \\ \hline
-    2    & 30   \\ \hline
-    3    & 23   \\ \hline
-    4    & 30   \\ \hline
-    5    & 20   \\ \hline
-    6    & 24   \\ \hline
-    7    & 29   \\ \hline
-    8    & 22   \\ \hline
-    9    & 30   \\ \hline
-    10   & 23   \\ \hline
-    & 24.8 \\
-    \hline
-  \end{tabular}
-  \caption{acer ASPIRE one/Chrome Performance: Step Three}
-  \label{aspChrPerf03}
+  \label{aspChrPerf}
 \end{table}
 
 Creating the 3 columns needed to calculate percentiles remained uninteresting.
@@ -400,7 +351,7 @@ issues.  The researcher obtained a much larger spreadsheet\footnote{A testing
   spreadsheet for use with OpenOffice.org bug 89976
   \url{http://j.mp/cmscu498OOoSs}} which allowed a much closer comparison of the
 two platforms and as expected the netbook performed far worse than the notebook;
-actually an \emph{order of magnitude} worse.
+actually an \emph{order of magnitude} worse. See table~\ref{ooCp} on page~\pageref{ooCp}.
 
 \begin{table}
   \begin{tabular}{| c | l | l |}
