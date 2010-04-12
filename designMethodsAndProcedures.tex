@@ -134,84 +134,19 @@ Equipment needed to reconduct my study would be
 
 \item A MacBook with the specifications outlined in table~\ref{macbookSpecs} on page~\pageref{macbookSpecs}.
 
-  \begin{table}[tbp]
-    \begin{tabular}{| r | p{5cm} |}
-      \hline
-      Model Identifier      & MacBook1,1 1 \\ \hline
-      Processor Name        & Intel Core Duo \\ \hline
-      Processor Speed       & 1.83 GHz \\ \hline
-      Number Of Processors  & 1 \\ \hline
-      Total Number Of Cores & 2 \\ \hline
-      L2 Cache              & 2 MB \\ \hline
-      Memory                & 2 GB \\ \hline
-      Bus Speed             & 667 MHz \\ \hline
-      Boot ROM Version      & MB11.0061.B03 \\ \hline
-      SMC Version (system)  & 1.4f12 \\ \hline
-      Mac OS X              & 10.6.3 \\ \hline
-      Network  Adapter      & Marvell Yukon Gigabit Adapter 88E8053 Singleport
-      Copper SA \\
-      \hline
-    \end{tabular}
-    \caption{MacBook Specifications}
-    \label{macbookSpecs}
-  \end{table}
+  \input{table.macbookSpecs.tex}
 
   Apple specific software used can be found in table~\ref{macbookSoftware} on page~\pageref{macbookSoftware}.
 
-  \begin{table}
-    \begin{tabular}{| r | p{5cm} |}
-      \hline
-      Google Chrome       & 5.0.342.9 \\ \hline
-      Safari              & 4.0.5 (6531.22.7) \\ \hline
-      Mozilla Firefox     & Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US;
-                            rv:1.9.2) Gecko/20100115 Firefox/3.6 \\ \hline
-      OpenOffice.org      & 3.2.0 OOO320m12 (Build:9483) \\
-      \hline
-    \end{tabular}
-    \caption{MacBook Software}
-    \label{macbookSoftware}
-  \end{table}
+  \input{table.macbookSoftware.tex}
 
 \item An acer ASPIRE one with the specifications outlined in table~\ref{aspireSpecs} on page~\pageref{aspireSpecs}.
 
-  \begin{table}
-    \begin{tabular}{| r | p{5cm} |}
-      \hline
-      Model                        & Acer Aspire one V1.07 \\ \hline
-      Enclosure Type               & Notebook \\ \hline
-      Operating System             & Windows XP Home Edition Service Pack 3 (build
-                                     2600) \\ \hline
-      Processor Name               & Intel Atom N270 \\ \hline
-      Processor Speed              & 1.60 GHz \\ \hline
-      Number of Processors         & 1 \\ \hline
-      Total Number of Cores        & 1 \\ \hline
-      Primary Cache                & 48 KB \\ \hline
-      Secondary Cache              & 512 KB \\ \hline
-      Hyper-threading              & 2 total \\ \hline
-      Main Memory                  & 1 GB \\ \hline
-      Network Adapter              & Atheros AR5007EG Wireless Network Adapter \\
-      \hline
-    \end{tabular}
-    \caption{acer ASPIRE one Specs}
-    \label{aspireSpecs}
-  \end{table}
+  \input{table.aspireSpecs.tex}
 
   Windows specific software used can be found in table~\ref{aspireSoftware} on page ~\pageref{aspireSoftware}.
 
-  \begin{table}
-    \begin{tabular}{| r | p{5cm} |}
-      \hline
-      Google Chrome                & 4.1.249.1045 (42898) \\ \hline
-      Safari                       & 4.0.5 (531.22.7) \\ \hline
-      Mozilla Firefox              & Mozilla/5.0 (Window; U; Windows NT 5.1;
-      en-US; rv:1.9.2.3) Gecko/20100401
-      Firefox/3.6.3 (.NET CLR 3.5.30729) \\ \hline
-      OpenOffice.org               & 3.2.0 OOO320m12 (Build:9483) \\
-      \hline
-    \end{tabular}
-    \caption{acer ASPIRE one Software}
-    \label{aspireSoftware}
-  \end{table}
+  \input{table.aspireSoftware.tex}
 
 % \item Online resources to conduct online research
 
@@ -274,26 +209,7 @@ second column took an average of 3 seconds. The third column took significantly
 longer, averaging 25 seconds. Data can be found in table~\ref{mbChromePerf} on
 page~\pageref{mbChromePerf}.
 
-\begin{table}
-  \begin{tabular}{| c | l | l | l |}
-    \hline
-    Run      & Step 1 & Step 2 & Step 3 \\ \hline
-    1        & 8      & 2      & 30     \\ \hline
-    2        & 7      & 3      & 17     \\ \hline
-    3        & 5      & 4      & 24     \\ \hline
-    4        & 6      & 3      & 23     \\ \hline
-    5        & 6      & 2      & 29     \\ \hline
-    6        & 4      & 5      & 28     \\ \hline
-    7        & 5      & 2      & 30     \\ \hline
-    8        & 6      & 2      & 19     \\ \hline
-    9        & 6      & 3      & 20     \\ \hline
-    10       & 7      & 3      & 23     \\ \hline
-    Average  & 6      & 2.9    & 24.3   \\
-    \hline
-  \end{tabular}
-  \caption{MacBook/Chrome Performance}
-  \label{mbChromePerf}
-\end{table}
+\input{table.mbChromePerf.tex}
 
 The problem seemed to be filling the formula down on the entire column.  Google
 Spreadsheet appears to be unable to handle large column selections without
@@ -310,26 +226,7 @@ task averaged less than 1 second over 10 runs.
 As was expected, performance was extremely comparable on the ASPIRE one when
 using Chrome. See table~\ref{aspChrPerf} on page~\pageref{aspChrPerf}
 
-\begin{table}
-  \begin{tabular}{| c | l | l | l |}
-    \hline
-    Run          & Step 1 & Step 2 & Step 3 \\ \hline
-    1            & 8      & 2      & 17     \\ \hline
-    2            & 7      & 3      & 30     \\ \hline
-    3            & 5      & 2      & 23     \\ \hline
-    4            & 6      & 3      & 30     \\ \hline
-    5            & 7      & 4      & 20     \\ \hline
-    6            & 9      & 5      & 24     \\ \hline
-    7            & 3      & 2      & 29     \\ \hline
-    8            & 10     & 3      & 22     \\ \hline
-    9            & 6      & 3      & 30     \\ \hline
-    10           & 7      & 4      & 23     \\ \hline
-    Averages     & 6.8    & 3.1    & 24.8   \\
-    \hline
-  \end{tabular}
-  \caption{acer ASPIRE one/Chrome Performance: Step One}
-  \label{aspChrPerf}
-\end{table}
+\input{table.aspChrPerf.tex}
 
 Creating the 3 columns needed to calculate percentiles remained uninteresting.
 
@@ -353,26 +250,7 @@ issues.  The researcher obtained a much larger spreadsheet\footnote{A testing
 two platforms and as expected the netbook performed far worse than the notebook;
 actually an \emph{order of magnitude} worse. See table~\ref{ooCp} on page~\pageref{ooCp}.
 
-\begin{table}
-  \begin{tabular}{| c | l | l |}
-    \hline
-    Run  & MacBook & ASPIRE one \\ \hline
-    1    & 134     & 1800       \\ \hline
-    2    & 129     & 1738       \\ \hline
-    3    & 144     & 1721       \\ \hline
-    4    & 111     & 1983       \\ \hline
-    5    & 119     & 1699       \\ \hline
-    6    & 128     & 1738       \\ \hline
-    7    & 145     & 1715       \\ \hline
-    8    & 133     & 1817       \\ \hline
-    9    & 129     & 1876       \\ \hline
-    10   & 125     & 1743       \\ \hline
-         & 129.7   & 1783       \\
-    \hline
-  \end{tabular}
-  \caption{OpenOffice.org Cross-Platform Performance Data}
-  \label{ooCp}
-\end{table}
+\input{table.ooCp.tex}
 
 \section{Delimitations}
 
