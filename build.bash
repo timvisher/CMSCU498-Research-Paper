@@ -33,8 +33,7 @@ if type open ; then
     open ../$TEX_FILE.pdf;
 fi
 
-#if [! -d ../../distro] ; then
-#    mkdir ../../distro
-#fi
-#
-#cp $TEX_FILE.pdf ../../distro
+if [ ! -d ../../distro] ; then
+    mkdir ../../distro
+fi
+cp ../$TEX_FILE.pdf ../../distro
