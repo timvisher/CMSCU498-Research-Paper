@@ -6,6 +6,11 @@ fi
 
 TEX_FILE=researchPaper
 
+if [ ! -z "$1" ] ; then
+    echo $1;
+    TEX_FILE=$1;
+fi
+
 #setup build structure
 mkdir build
 mkdir build/latex
