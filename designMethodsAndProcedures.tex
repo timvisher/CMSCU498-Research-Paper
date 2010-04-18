@@ -31,7 +31,7 @@ nature:
 \item Mobile platform providers are still designing their machines to primarily
   behave as a stripped down desktop.  As such, they do not optimize for use of
   Cloud Services in such a way that their device will experience longer battery
-  life and better performance; and
+  life and better performance in that context; and
 \item Consumers still believe that computers are primarily for executing tasks
   locally.  The author believes that this is no longer true, both from personal
   experience as well as from usage reports.  However, consumer perception is as
@@ -44,22 +44,13 @@ an ideal mobile platform for the public consumer.
 The questions and hypotheses being addressed are as follows: 
 \begin{inparaenum}[(1)]
   \item The author's main hypothesis is that mass adoption of ultra-mobile PCs
-    will not be seen until hardware offerings pass muster.  Tightly integrated
-    here are 2 questions:
-    \begin{inparaenum}[(a)]
-    \item What about current mobile platform offerings is unsatisfying to the
-      average consumer?
-    \item What would the ideal public consumer mobile platform, designed to take
-      full advantage of cloud services, look like?
-    \end{inparaenum}
+    will not be seen until hardware offerings are designed to maximize length of
+    use and cloud service utilization performance.  Tightly integrated here is
+    the question: What would the ideal public consumer mobile platform, designed
+    to take full advantage of cloud services, look like?
   \item A corollary hypothesis is that Netbooks and Notebooks perform nearly
     indistinguishably from each other when utilizing cloud services despite the
     observable differences in performance when using local applications.
-  \item Another hypothesis that there likely will be no time to examine is that
-    average consumer perception of computer use does not adequately reflect
-    reality.
-  \item A final, tangential question that the author is interested in is to what
-    degree privacy concerns are holding back public adoption of cloud services.
 \end{inparaenum}
 
 The procedure that the researcher wishes to pursue for this project is split
@@ -72,9 +63,8 @@ display, WiFi, and Bluetooth are the biggest killers of battery life.  The
 author would like to investigate if there is verifiable truth to that claim.
 
 The primary strategy for investigating Netbook vs. Notebook performance will be
-testing performance for services offered both locally and in the cloud.
-
-This will attempt to verify that there is indeed little to no difference between
+testing performance for services offered both locally and in the cloud.  This
+will attempt to verify that there is indeed little to no difference between
 Netbook and Notebook performance when the cloud is what is being utilized.
 
 \section{Instrumentation}
@@ -93,7 +83,10 @@ The primary participants in this research are
 Generalization would be difficult because only Intel Core Duo and Atom
 Processors are being tested.  Also, a single broadband Internet connection was
 used to conduct the testing so speed differences have not been fully explored.
-Also, different office suites offer different performance.
+Also, different office suites offer different performance.  However, none of
+these considerations should overly affect the ability to generalize.  Most of
+today's mobile machines use processors with very similar performance
+characteristics and office suites also are becoming indistinguishable.
 
 Equipment needed to reconduct my study would be
 \begin{inparaenum}[(1)]
@@ -104,24 +97,25 @@ Equipment needed to reconduct my study would be
 \item The testing Spreadsheet.
 \end{inparaenum}
 
-\begin{enumerate}
+The MacBook needs the specifications outlined in table~\ref{macbookSpecs} on
+page~\pageref{macbookSpecs} with the software listed in
+table~\ref{macbookSoftware} on page~\pageref{macbookSoftware} installed.
 
-\item A MacBook with the specifications outlined in table~\ref{macbookSpecs} on page~\pageref{macbookSpecs}.
-
-  Apple specific software used can be found in table~\ref{macbookSoftware} on page~\pageref{macbookSoftware}.
-
-\item An acer ASPIRE one with the specifications outlined in table~\ref{aspireSpecs} on page~\pageref{aspireSpecs}.
-
-  Windows specific software used can be found in table~\ref{aspireSoftware} on page ~\pageref{aspireSoftware}.
+The acer ASPIRE one needs the specifications outlined in table~\ref{aspireSpecs}
+on page~\pageref{aspireSpecs} and the software listed in
+table~\ref{aspireSoftware} on page ~\pageref{aspireSoftware} installed.
 
 % \item Online resources to conduct online research
+
+\begin{enumerate}
 
 \item A Google account with access to Google Docs for spreadsheet analysis.
 
 \item The Spreadsheet.\footnote{Spreadsheet published here:
   \url{j.mp/cmscu498GSs}}
 
-\item A clock or stopwatch to measure performance.
+\item A clock or stopwatch to measure performance\footnote{The researcher used
+  iChrono found here: \url{http://widgets.tossen.net/}}.
 
 \end{enumerate}
 
@@ -133,15 +127,15 @@ Equipment needed to reconduct my study would be
 
 \input{table.aspireSoftware.tex}
 
-It is impossible to generalize this research because there was not enough time
-or resources to truly test on varied hardware and over various connection.
-Also, performance testing was somewhat arbitrary as actual sampling could not be
+It is impossible to prove the generalization of this research because there was
+not enough time or resources to truly test on varied hardware and over various
+connection.  That being said, there is no reason why the outcomes of the testing
+would vary too widely across multiple mobile platforms.  Also, performance
+testing was somewhat arbitrary as actual process sampling could not be
 accomplished.  Instead, observation alone was used in conjunction with the
 system monitoring applications of the respective operating systems.
 
 \section{Procedure/Methodology}
-
-\subsection{Performance Testing}
 
 %Expected recipe
 
@@ -171,17 +165,15 @@ The steps taken by the researcher to test performance are the following:
 
 \end{enumerate}
 
-The resarcher used a Groovy script with the argument .25 to generate the random
+The researcher used a Groovy script with the argument .25 to generate the random
 numbers used to seed the functions of the spreadsheet.  For source
 see listing~\ref{randomSourceGen.groovy} in appendix~\ref{sourceCode}.
 
-\subsection{MacBook/Chrome Performance}
-
-Creation of the spreadsheet from the source file took an average of 6 seconds
-based on ten trial uploads on the MacBook in Google Chrome. Creation of the
-second column took an average of 3 seconds. The third column took significantly
-longer, averaging 25 seconds. Data can be found in table~\ref{mbChromePerf} on
-page~\pageref{mbChromePerf}.
+On the MacBook in Google Chrome, creation of the spreadsheet from the source
+file took an average of 6 seconds based on ten trial uploads on the MacBook in
+Google Chrome. Creation of the second column took an average of 3 seconds. The
+third column took significantly longer, averaging 25 seconds. Data can be found
+in table~\ref{mbChromePerf} on page~\pageref{mbChromePerf}.
 
 \input{table.mbChromePerf.tex}
 
@@ -194,8 +186,6 @@ more often than not it simply would never show up.
 
 Creating the 3 columns needed to calculate percentiles was uninteresting.  Each
 task averaged less than 1 second over 10 runs.
-
-\subsection{ASPIRE one/Chrome Performance}
 
 As was expected, performance was extremely comparable on the ASPIRE one when
 using Chrome. See table~\ref{aspChrPerf} on page~\pageref{aspChrPerf}
@@ -211,8 +201,6 @@ changing the display of the data.  It appears that Google offloads most of the
 data into memory and relies on local calculations to redisplay the data in the
 window.  With the weaker CPU and Memory set, the Netbook saw performance losses
 due to that.
-
-\subsection{OpenOffice.org Performance}
 
 At the sampling size Google Docs could handle before becoming unusable, creating
 each of the columns of the Spreadsheet was instantaneous \emph{on both
@@ -230,28 +218,13 @@ actually an \emph{order of magnitude} worse. See table~\ref{ooCp} on page~\pager
 
 %Suggestions for future research?
 
-Initially a much larger spreadsheet was desired but performance limits in Google
-Docs forbid this.  Unfortunately, that made comparison at the local level
-effectively moot as neither platform showed any difficulty at all in performing
-the various calculations while much larger samples (~65,000) would take
-significant time to open and just as much time to recalculate if things were
-changed.  However, both systems had to be operating on the same data both
-locally and in the cloud.
+Limitations in the Google Docs platform constrained the size of the testing
+spreadsheet greatly.  A different service could be used to get a more realistic
+baseline for cloud versus local performance comparison.
 
-Time and resource constraints don't permit the researcher to test on more
-platforms.  It would be interesting to test different hardware configurations.
-
-Time constraints don't permit the author to investigate thoroughly why Google
-Spreadsheet performance is what it currently is.  Contacts within Google would
-almost certainly be required.
-
-Due to time constraints, the author cannot investigate the degree to which
-privacy concerns are affecting mobile platform adoption.  Certainly, concepts of
-privacy are changing rapidly, but to what degree are people comfortable truly
-out sourcing much of their private data is at this point, unknown.  Privacy
-concerns may be a critical factor in mobile platform adoption and if that is the
-case, designing the perfect mobile platform would have little or no effect on
-adoption.
+Only two platforms, a single browser, and a single office suite were tested on,
+albeit across multiple platforms.  More hardware and software configurations
+could be tested to help validate the generalization of the research conclusions.
 
 \section{Results}
 
