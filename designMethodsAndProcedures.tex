@@ -1,5 +1,5 @@
 This section will outline the different areas of knowledge that a reader of this
-paper will need to be familiar with on order to be able to successfully
+paper will need to be familiar with in order to be able to successfully
 interpret the research presented.
 
 The reader should:
@@ -16,7 +16,7 @@ The reader should:
 \item be familiar with the offerings available currently in today's mobile
   computing environment.  The research will discuss various performance costs
   and benefits in relation to traditional notebooks, netbooks, and smart-phones;
-  and
+  and;
 \item a cursory understanding of software testing.  Some of the procedures the
   researcher will be using will center around automating the testing of various
   aspects of computer performance on various mobile platforms as well as in the
@@ -37,11 +37,10 @@ nature:
   experience as well as from usage reports.  However, consumer perception is as
   if not more important than actual facts.
 \end{inparaenum}
-
 The problem, then, is discovering what factors would have to coincide to produce
 an ideal mobile platform for the public consumer.
 
-The questions and hypotheses being addressed are as follows: 
+The questions and hypotheses being addressed are as follows:
 \begin{inparaenum}[(1)]
   \item The author's main hypothesis is that mass adoption of ultra-mobile PCs
     will not be seen until hardware offerings are designed to maximize length of
@@ -54,8 +53,11 @@ The questions and hypotheses being addressed are as follows:
 \end{inparaenum}
 
 The procedure that the researcher wishes to pursue for this project is split
-into 2 areas of investigation: (1) hampered mobile platform adoption and; (2)
-netbook/notebook performance comparability.
+into 2 areas of investigation:
+\begin{inparaenum}[(1)]
+\item hampered mobile platform adoption and;
+\item netbook/notebook performance comparability.
+\end{inparaenum}
 
 The author intends to investigate research that has already been done in the
 area of battery life performance.  It is somewhat common knowledge that a bright
@@ -71,30 +73,17 @@ Netbook and Notebook performance when the cloud is what is being utilized.
 
 %What do you need to do your project.  Only a couple paragraphs.
 
-The primary participants in this research are 
-\begin{inparaenum}[(1)]
-\item A MacBook notebook computer;
-\item An acer ASPIRE one netbook computer;
-\item Google Spreadsheet;
-\item Google Chrome; and
-\item OpenOffice.org
-\end{inparaenum}
-
-Generalization would be difficult because only Intel Core Duo and Atom
-Processors are being tested.  Also, a single broadband Internet connection was
-used to conduct the testing so speed differences have not been fully explored.
-Also, different office suites offer different performance.  However, none of
-these considerations should overly affect the ability to generalize.  Most of
-today's mobile machines use processors with very similar performance
-characteristics and office suites also are becoming indistinguishable.
-
 Equipment needed to reconduct my study would be
 \begin{inparaenum}[(1)]
 \item A MacBook;
 \item An acer ASPIRE one;
 \item Several Browsers;
 \item OpenOffice.org;
-\item The testing Spreadsheet.
+\item The testing Spreadsheet.\footnote{Spreadsheet published here:
+  \url{j.mp/cmscu498GSs}}
+\item A Google account with access to Google Docs for spreadsheet analysis.
+\item A clock or stopwatch to measure performance\footnote{The researcher used
+  iChrono found here: \url{http://widgets.tossen.net/}}.
 \end{inparaenum}
 
 The MacBook needs the specifications outlined in table~\ref{macbookSpecs} on
@@ -105,20 +94,6 @@ The acer ASPIRE one needs the specifications outlined in table~\ref{aspireSpecs}
 on page~\pageref{aspireSpecs} and the software listed in
 table~\ref{aspireSoftware} on page~\pageref{aspireSoftware} installed.
 
-% \item Online resources to conduct online research
-
-\begin{enumerate}
-
-\item A Google account with access to Google Docs for spreadsheet analysis.
-
-\item The Spreadsheet.\footnote{Spreadsheet published here:
-  \url{j.mp/cmscu498GSs}}
-
-\item A clock or stopwatch to measure performance\footnote{The researcher used
-  iChrono found here: \url{http://widgets.tossen.net/}}.
-
-\end{enumerate}
-
 \input{table.macbookSpecs.tex}
 
 \input{table.macbookSoftware.tex}
@@ -126,6 +101,15 @@ table~\ref{aspireSoftware} on page~\pageref{aspireSoftware} installed.
 \input{table.aspireSpecs.tex}
 
 \input{table.aspireSoftware.tex}
+
+Generalization would be difficult because only Intel Core Duo and Atom
+Processors are being tested.  Also, a single broadband Internet connection was
+used to conduct the testing so speed differences have not been fully explored.
+Different office suites offer different performance characteristics and only one
+has been explored.  However, none of these considerations should overly affect
+the ability to generalize.  Most of today's mobile machines use processors with
+very similar performance characteristics and office suites also are becoming
+indistinguishable.
 
 It is impossible to prove the generalization of this research because there was
 not enough time or resources to truly test on varied hardware and over various
@@ -188,7 +172,7 @@ Creating the 3 columns needed to calculate percentiles was uninteresting.  Each
 task averaged less than 1 second over 10 runs.
 
 As was expected, performance was extremely comparable on the ASPIRE one when
-using Chrome. See table~\ref{aspChrPerf} on page~\pageref{aspChrPerf}
+using Chrome. See table~\ref{aspChrPerf} on page~\pageref{aspChrPerf}.
 
 \input{table.aspChrPerf.tex}
 
@@ -210,7 +194,8 @@ issues.  The researcher obtained a much larger spreadsheet\footnote{A testing
   spreadsheet for use with OpenOffice.org bug 89976
   \url{http://j.mp/cmscu498OOoSs}} which allowed a much closer comparison of the
 two platforms and as expected the netbook performed far worse than the notebook;
-actually an \emph{order of magnitude} worse. See table~\ref{ooCp} on page~\pageref{ooCp}.
+actually an \emph{order of magnitude} worse. See table~\ref{ooCp} on
+page~\pageref{ooCp}.
 
 \input{table.ooCp.tex}
 
@@ -229,15 +214,15 @@ could be tested to help validate the generalization of the research conclusions.
 \section{Results}
 
 In general, the researcher was amazed to find that Google Docs is virtually
-unusable in it's present form.  While taking on almost no CPU usage locally at
-all, it still took large amounts of time to enter formulas and calculate their
-values for a relatively small set (3,000) of data points.  Compared to
-OpenOffice.org on either platform, this was extremely slow.  Interestingly
-enough, CPU and Bandwidth did not seem to play a factor in Google Docs
-performance.  The researcher's only guess is that the way they allocate
-computing resources at Google is quite limiting in power.
+unusable in it's present form for spreadsheets of any reasonabel size.  While
+taking on almost no CPU usage locally at all, it still took large amounts of
+time to enter formulas and calculate their values for a relatively small set
+(3,000) of data points.  Compared to OpenOffice.org on either platform, this was
+extremely slow.  Interestingly enough, CPU and Bandwidth did not seem to play a
+factor in Google Docs performance.  The researcher's only guess is that the way
+they allocate computing resources at Google isn't optimized for response time.
 
-These results are not very arbitrary but there is some observation in there
+These results are not very arbitrary but they are purely based on observation
 which means that future researchers will come up with slightly different
 results.  The results are demonstrated for verification by the tables of
 performance data included in this text
