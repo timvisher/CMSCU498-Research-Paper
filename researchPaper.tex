@@ -35,18 +35,18 @@ of desktop computers.  At the same time, extraordinary advances have been made
 in the area of broadband Internet connectivity.  These advances have lead to the
 explosion a software delivery strategy known as Cloud Computing; a resurgence of
 the Client/Server computing model so prevalent in the early days of public
-computing.  Cloud services allow a computer to do many operations previously
+computing.  Cloud Services allow a computer to do many operations previously
 only thought possible on a powerful local machine by sending the data and
 instructions to a much more powerful third party computer and waiting to get the
 results back.  The question the researcher is attempting to answer is:
 Considering advances in Cloud Computing, what would the ideal mobile platform,
-designed for longevity between charges and use of cloud services, look like?  In
+designed for longevity between charges and use of Cloud Services, look like?  In
 order to answer this question, two areas of research were investigated: Battery
 performance research was surveyed as the researcher believes that battery life is
 one of the main culprits behind hampered mobile platform adoption, and
 performance testing was done on a traditional Notebook PC and a Netbook PC to
-ascertain whether the two devices' use of cloud services was identical or not.
-The research proved that utilizing cloud services requires almost no local
+ascertain whether the two devices' use of Cloud Services was identical or not.
+The research proved that utilizing Cloud Services requires almost no local
 processing power, except in the display of the results while at the same time
 confirming that the performance differences between the two mobile platforms was
 very noticeable when performing local operations.  The research also indicated
@@ -55,7 +55,7 @@ platforms is in demand management as research in battery technology especially
 has stalled except for a few bright areas like that of utilizing nano technology
 to build ultra-capacitive batteries.  The implications of this research lead the
 researcher to conclude that the ideal mobile platform would enforce the use of
-cloud services as a practice of demand management and focus almost all of it's
+Cloud Services as a practice of demand management and focus almost all of it's
 computational resources on efficiently displaying graphical data and maintaining
 fast and reliable network connectivity.
 
@@ -65,11 +65,74 @@ fast and reliable network connectivity.
 
 \newpage
 
-Today's mobile platforms are designed to be mobile desktop computing
-environments.  This means that they are optimized for local operations and
-sacrifice run time to remain performant.  The researcher believes this is out of
-step with the current trends in Cloud Computing.  Just like in the beginnings of
-public computing, Cloud Computing centralizes on the idea of making software
+%% General Introduction
+
+The purpose of this project is to discover the attributes of mobile computing
+hardware specifically designed to take advantage of the current resurgence in
+computing utilities collectively known as Cloud Computing.  The primary
+motivation is that today's Netbook and ultra-mobile PC offerings are still being
+designed within a desktop computing frame of mind where most of the work the
+computer is going to do is to be taken care of locally.  It is believed that
+there is a better design model for these computers in this new environment.  The
+author's thesis is that there is a certain performance barrier beyond which
+consumers will be willing to re-adopt the thin-client, time-sharing computer
+model, that barrier being a combination of the usable life of the device between
+charges and optimization for basic tasks performed locally as well as optimum
+performance for services accessed via the Internet.  In order to discover this
+hardware configuration, the usability of current Cloud Services and hardware
+configurations will be investigated.
+
+%% Cloud Computing
+
+Amazon and other high-profile technology companies have already begun to offer a
+wide variety of Cloud Services designed to place the brunt of the computational
+and storage related burden on computers on the network rather than on the
+customers' desktop machines \citep{reiss2008}.  These Cloud Computing services
+are giving rise to a new class of applications, termed collectively by Tim
+O'Reilly as Web 2.0, that focus on delivering effective software solutions via
+the Internet rather than distributing them via shrink-wrapped packages
+\citep{bleicher2006}.  Examples of such software included Google's office suite
+Google Docs, their mail client GMail, YouTube's video encoding services,
+Delicious's bookmarking and tagging services, and Abobe's web-based Photoshop
+implementation.  What characterizes each of these services is two fold:
+\begin{inparaenum}[(1)]
+\item an emphasis on openness and collaboration; and
+\item extremely low hardware requirements for the clients accessing them.
+\end{inparaenum}
+It is the low hardware requirements that are truly interesting for the research
+being presented here.  These low requirements allow for a change in hardware
+that could produce much longer run times without jeapordizing user experience.
+
+Thus, the move to the Cloud Computing paradigm is happening and is just waiting
+for someone to create a hardware platform that is truly optimized for that
+environment.
+
+%% Mobile Hardware
+
+In tandem with and because of these developments in Cloud Computing, companies
+such as ASUS are beginning to offer what have become known as netbooks or
+ultra-mobile PCs.  These computers are stripped down versions of more
+traditional notebook computers, in both power and size.  They are designed to
+surf the web and do many of the other common things that computer users do
+(e-mail, word processing, light gaming) while being very portable and
+inexpensive.  Also, devices like the iPhone, Blackberry, and Palm, collectively
+known as smart-phones, are revolutionizing the way people surf the web and think
+about computing access.  GMail, Google's popular web based e-mail client, has a
+version specifically designed to work with such small scale mobile computing
+devices (as smart-phones are really much more than phones now) in deference to
+the fact that many customers desire to be able to access the services they use
+on the Web from anywhere at any time.  At the same time, efforts are being made
+to give the experience of a desktop application to all mobile users, an effort
+that is very hard to achieve on today's computing platforms (especially
+smart-phones).
+
+While these lower power machines are being developed today specifically because
+the richness of the Web has put many people into their browser for most of their
+day, today's mobile platforms are still being designed to be mobile desktop
+computing environments.  This means that they are optimized for local operations
+and sacrifice run time to remain performant.  The researcher believes this is
+out of step with current trends in Cloud Computing.  Just like in the beginnings
+of public computing, Cloud Computing centralizes on the idea of making software
 available as a service accessed over cheap or rented hardware.  The problems
 faced by the original software providers (public access to the Internet and the
 cost of providing and procuring the hardware) are not faced by today's service
@@ -77,28 +140,30 @@ providers.  Broadband Internet connectivity is widespread at this point, at
 least in the developed and increasingly so in the developing world and hardware
 has dropped in price enough that most families are able to afford it.  Despite
 these advances, mobile platform providers are still failing to capitalize on the
-performance gains possible in the dependence upon cloud computing resources
+performance gains possible in the dependence upon Cloud Computing resources
 which offload much of the processing power required to do computation to a
 foreign machine and thus extend battery life greatly through demand management.
 The design of such a device could change the way people of think of mobile
 computing.
 
-The purpose of this research was to discover how the advent of cloud computing
+%% Question
+
+The purpose of this research was to discover how the advent of Cloud Computing
 will affect the design of mobile hardware.  Current mobile hardware is designed
 with the idea of making a desktop computer mobile.  The emphasis is on local
 computational power with applications and services that are hosted on your
 machine.  The advent of Cloud Computing could allow for a redesign of mobile
 platforms that focused on providing long battery life and high quality
-connection to and use of cloud services rather than one that focuses on local
+connection to and use of Cloud Services rather than one that focuses on local
 services that can also access the cloud as an aside.
 
-The goal of the design would be to 
+The goal of the design would be to
 \begin{inparaenum}[(1)]
 \item Maximize battery life;
 \item Maximize performance, perhaps through the design of a special processor
   that focuses on doing computation specific to utilizing web services
   efficiently; and
-\item Minimize local computation to 
+\item Minimize local computation to
   \begin{inparaenum}[(a)]
   \item displaying the UI;
   \item translating input; and
@@ -106,9 +171,9 @@ The goal of the design would be to
   \end{inparaenum}
 \end{inparaenum}
 
-% Case for why the question is important or interesting and why the reader should want an answer?
+%% Relevancy
 
-The reason my research question is relevant is that cloud services are finally
+The reason this research question is relevant is that Cloud Services are finally
 beginning to gain real traction in the public's eye.  Many people are happy to
 get their e-mail primarily through a web interface like GMail or Hotmail,
 signaling a real change in public perceptions of performance, customizability,
