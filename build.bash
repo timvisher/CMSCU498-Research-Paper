@@ -1,8 +1,5 @@
 #!/bin/bash
-
-if [ -d build ] ; then
-    rm -r build
-fi
+find . -name 'build' -type d -exec rm -r '{}' \;
 
 TEX_FILE=researchPaper
 
@@ -17,7 +14,7 @@ mkdir build/latex
 
 #move required files in
 find . -name '*.tex'  -exec cp '{}' build/latex/ \;
-find . -name '*.bib' -exec cp '{}' build/latex/ \;
+find . -name '*.bib' -exec cp '{}' build/latex/ \; -print
 find . -name '*.groovy' -exec cp '{}' build/latex/ \;
 
 #LaTeX
