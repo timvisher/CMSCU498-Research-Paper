@@ -82,8 +82,8 @@ Equipment needed for this study included
 \end{inparaenum}
 
 The hardware and software requirements to run this test are outlined in detail
-in \emph{Table~\ref{table:hardwareSpecs}} on page~\pageref{table:hardwareSpecs}
-and \emph{Table~\ref{table:softwareSpecs}} on page~\pageref{table:softwareSpecs}
+in \emph{Table}~\ref{table:hardwareSpecs} on \emph{page}~\pageref{table:hardwareSpecs}
+and \emph{Table}~\ref{table:softwareSpecs} on \emph{page}~\pageref{table:softwareSpecs}
 respectively.
 
 \input{table.hardwareSpecs.tex}
@@ -118,7 +118,7 @@ OpenOffice.org Calc:
 
 The researcher used a Groovy script with the argument .25 to generate the random
 numbers used to seed the functions of the spreadsheet.  For source see
-Listing~\ref{randomSourceGen.groovy} in Appendix~\ref{sourceCode}.
+\emph{Listing}~\ref{randomSourceGen.groovy} in \emph{Appendix}~\ref{sourceCode}.
 
 \subsection{Delimitations}
 
@@ -143,7 +143,7 @@ system monitoring applications of the respective operating systems.
 \subsection{Results}
 
 In this section the author will document the results based on the process
-outlined in section~\ref{sec:proc} on page \pageref{sec:proc}.  First, the
+outlined in \emph{section}~\ref{sec:proc} on \emph{page}~\pageref{sec:proc}.  First, the
 author will examine the results of following the process in Google Chrome.
 
 On the MacBook in Google Chrome, creation of the spreadsheet from the source
@@ -152,7 +152,7 @@ Google Chrome.  Creation of the second column where the initial number between
 -1 and 1 is multiplied by 10 and increased by 1 through a formula fill took an
 average of 3 seconds.  The third column where successively larger medians are
 taken based on the current row took significantly longer, averaging 25 seconds.
-Data can be found in Table~\ref{mbChromePerf} on page~\pageref{mbChromePerf}.
+Data can be found in \emph{Table}~\ref{mbChromePerf} on \emph{page}~\pageref{mbChromePerf}.
 No CPU usage was observed during the creation of these columns except when the
 new data had to be displayed.
 
@@ -165,21 +165,21 @@ runs.
 As was expected, performance was extremely comparable on the ASPIRE one when
 using Chrome.  While there was a slight performance degradation, time to
 complete the various tasks was almost identical to completing them on the
-MacBook.  See Table~\ref{aspChrPerf} on page~\pageref{aspChrPerf}.
+MacBook.  See \emph{Table}~\ref{aspChrPerf} on \emph{page}~\pageref{aspChrPerf}.
 
 \input{table.aspChrPerf.tex}
 
 At the sampling size Google Docs could handle before becoming unusable which was
 around the size of the sample spreadsheet (3,000 data cells, 6,300 formula
 cells), creating each of the columns of the Spreadsheet was instantaneous
-\emph{on both platforms}.  This was very surprising to the researcher although
-in retrospect it should not have been.  At that sample size, no local
-spreadsheet system has issues.  The researcher obtained a much larger
+\emph{on both platforms}.  The researcher obtained a much larger
 spreadsheet\footnote{A testing spreadsheet for use with OpenOffice.org bug 89976
   \url{http://j.mp/cmscu498OOoSs}} which allowed a much closer comparison of the
 two platforms and as expected the netbook performed far worse than the notebook;
-actually an \emph{order of magnitude} worse.  See Table~\ref{ooCp} on
-page~\pageref{ooCp}.
+actually an \emph{order of magnitude} worse.  A different process had to be used
+since the spreadsheet was already created.  The times measured were for opening
+the spreadsheet which initiated an initial computation of the entire
+Spreadsheet.  See \emph{Table}~\ref{ooCp} on \emph{page}~\pageref{ooCp}.
 
 \input{table.ooCp.tex}
 
