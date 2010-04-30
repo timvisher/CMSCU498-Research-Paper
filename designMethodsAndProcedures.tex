@@ -4,81 +4,75 @@ This section outlines the different areas of knowledge that a reader of this
 paper will need to be familiar with in order to be able to successfully
 interpret the research presented.
 
-The reader should:
+The author assumes the reader has knowledge of:
 \begin{inparaenum}[(1)]
-\item be familiar with various aspects of hardware performance, especially those
-  associated with inter-charge mobile life expectancy.  Much of the research
-  here-in has to do with how computer usage and hardware design affects this
-  life expectancy and what can be done to make mobile devices last longer on a
-  single charge;
-\item be familiar with Cloud Services and how they are used.  The research deals
-  heavily with the different demands that Cloud Services make on mobile
-  computing hardware compared to traditional desktop equivalents of the same
-  services;
-\item be familiar with the offerings available currently in today's mobile
-  computing environment.  The research will discuss various performance costs
-  and benefits in relation to traditional notebooks, netbooks, and smart-phones.
+\item various aspects of hardware performance, especially those associated with
+  inter-charge mobile life expectancy;
+\item Cloud Services and how they are used;
+\item the offerings available currently in today's mobile computing environment.
 \end{inparaenum}
 
-The problem that this research project is addressing is as follows: Currently,
-adoption of ultra-mobile PCs has primarily been driven by price.  The author
-believes that the reason wider spread adoption hasn't been seen yet is of a dual
-nature:
-\begin{inparaenum}[(1)]
-\item Mobile platform providers are still designing their machines to primarily
-  behave as a stripped down desktop.  As such, they do not optimize for use of
-  Cloud Services in such a way that their device will experience longer battery
-  life and better performance in that context; and
-\item Consumers still believe that computers are primarily for executing tasks
-  locally.  The author believes that this is no longer true, both from personal
-  experience as well as from usage reports.  However, consumer perception is as
-  if not more important than actual facts.
-\end{inparaenum}
-The problem, then, is discovering what factors would have to coincide to produce
-an ideal mobile platform for the public consumer.
+The problem that this research project is addressing focuses on the fact that
+current adoption of ultra-mobile PCs has primarily been driven by price rather
+than mobile performance \citep{ap2009}.  Wider spread adoption by customers
+looking to have a device that is optimized for portability and long battery life
+rather than just customers that are looking for a cheaper Notebook hasn't been
+seen yet.  The author believes that the reason for this is that mobile platform
+providers are still designing their machines to primarily behave as a stripped
+down desktop.  As such, they do not optimize for use of Cloud Services in such a
+way that their device will experience longer battery life and better performance
+in that context.  The problem, then, is discovering what factors would have to
+coincide to produce an ideal mobile platform for the public consumer.
 
-The questions and hypotheses being addressed are as follows:
+The research questions being addressed are as follows:
 \begin{inparaenum}[(1)]
-  \item The author's main hypothesis is that mass adoption of ultra-mobile PCs
-    will not be seen until hardware offerings are designed to maximize length of
-    use and cloud service utilization performance.  Tightly integrated here is
-    the question: What would the ideal public consumer mobile platform, designed
-    to take full advantage of cloud services, look like?
-  \item A corollary hypothesis is that Netbooks and Notebooks perform nearly
-    indistinguishably from each other when utilizing cloud services despite the
-    observable differences in performance when using local applications.
+  \item The author's main investigation is into whether or not today's
+    ultra-mobile PCs could be designed differently in order to take advantage of
+    Cloud Services in such a way that mobile usage experience would be improved.
+    If this is the case and ultra-mobile PCs could be designed differently, what
+    would the ideal mobile platform, designed to take advantage of cloud
+    services, look like?
+  \item A corollary investigation is into whether or not Netbooks and Notebooks
+    perform nearly indistinguishably from each other when utilizing cloud
+    services despite the observable differences in performance when using local
+    applications.
 \end{inparaenum}
 
-The procedure that the researcher pursued for this project was split into 2 areas
-of investigation:
+The procedure that the researcher pursued for this project was split into 2
+areas of investigation:
 \begin{inparaenum}[(1)]
 \item ways that battery life can be maximized through demand management; and
-\item netbook/notebook performance comparability.
+\item Netbook/Notebook performance comparability.
 \end{inparaenum}
+Battery life is important because it is the author's belief that the main
+opportunity for improvement in the ultra-mobile PC space is the extension of
+battery life through demand management.  In order to extend battery life,
+Netbooks would have to be designed differently to emphasize the use of external
+rather than local services.  Netbook/Notebook performance comparability matters
+because the author believes that proving that Netbooks and Notebooks perform
+indistinguishably from each other when using Cloud Services will reveal that
+Netbooks can be stripped down further in order to extend battery life.
 
 The author investigated research that has already been done in the area of
-battery life performance.  It is somewhat common knowledge that a bright
-display, WiFi, and Bluetooth are the biggest killers of battery life.  The
-author surveyed research in the Demand Management field to find evidence for
-those claims.
+battery life performance.  It is common knowledge that a bright display, WiFi,
+and Bluetooth are the biggest killers of battery life.  The author surveyed
+research in the Demand Management field to find evidence for those claims.
 
 The primary strategy for investigating Netbook vs. Notebook performance was
 testing performance for services offered both locally and in the cloud.  This
 was executed by testing spreadsheet operations on Google Docs and doing the same
 operations locally.  Time to complete various tasks associated with the
-Spreadsheet was measured.  Based on this performance research, the author
+spreadsheet was measured.  Based on this performance research, the author
 constructed a theoretical computer that is optimized for the use of these
 services in order to gain other performance boosts.
 
 \subsection{Instrumentation}
 
-%What do you need to do your project.  Only a couple paragraphs.
-
-Equipment needed to reconduct my study would be
+Equipment needed for this study included
 \begin{inparaenum}[(1)]
 \item A MacBook;
 \item An acer ASPIRE one;
-\item Several Browsers;
+\item Google Chrome;
 \item OpenOffice.org;
 \item The testing Spreadsheet.\footnote{Spreadsheet published here:
   \url{j.mp/cmscu498GSs}}
@@ -87,169 +81,104 @@ Equipment needed to reconduct my study would be
   iChrono found here: \url{http://widgets.tossen.net/}}.
 \end{inparaenum}
 
-The MacBook needs the specifications outlined in Table~\ref{macbookSpecs} on
-page~\pageref{macbookSpecs} with the software listed in
-Table~\ref{macbookSoftware} on page~\pageref{macbookSoftware} installed.
+The hardware and software requirements to run this test are outlined in detail
+in \emph{Table}~\ref{table:hardwareSpecs} on \emph{page}~\pageref{table:hardwareSpecs}
+and \emph{Table}~\ref{table:softwareSpecs} on \emph{page}~\pageref{table:softwareSpecs}
+respectively.
 
-The acer ASPIRE one needs the specifications outlined in Table~\ref{aspireSpecs}
-on page~\pageref{aspireSpecs} and the software listed in
-Table~\ref{aspireSoftware} on page~\pageref{aspireSoftware} installed.
+\input{table.hardwareSpecs.tex}
 
-\input{table.macbookSpecs.tex}
-
-\input{table.macbookSoftware.tex}
-
-\input{table.aspireSpecs.tex}
-
-\input{table.aspireSoftware.tex}
+\input{table.softwareSpecs.tex}
 
 \subsection{Procedure/Methodology}
 
+\label{sec:proc}
 %Expected recipe
 
-The steps taken by the researcher to test performance of Netbooks and Notebook
-using Google Docs Spreadsheet and its locally hosted counterpart OpenOffice.org
-Calc were the following:
+The researcher used the following process to test the performance of Netbooks
+and Notebooks using Google Docs Spreadsheet and its locally hosted counterpart
+OpenOffice.org Calc:
 
-\begin{enumerate}
-
-\item Create a source CSV file with ~3,000 random numbers between -1 and 1.
-
-\item Create a new spreadsheet based on the CSV file.
-
+\begin{compactenum}
+\item Create a source CSV file with ~3,000 random numbers between -1 and
+  1.  \label{item:proc1}
+\item Create a new spreadsheet based on the CSV file.  \label{item:proc2}
 \item Create a new column and fill with the function =An*10+1 where n is the
-  current row.
-
+  current row.  \label{item:proc3}
 \item Create a new column and fill with the function =MEDIAN(B1:Bn) where n is
-  the current row.
-
-\item Create a new column and enter 1-100 in the first hundred rows.
-
+  the current row.  \label{item:proc4}
+\item Create a new column and enter 1-100 in the first hundred
+  rows.  \label{item:proc5}
 \item Create a new column and fill with the function =Dn/100 where n is the
-  current row.
-
+  current row.  \label{item:proc6}
 \item Create a new column and fill with the function =PERCENTILE(C1:C10004,En)
-  where n is the current row.
-
-\item Change an A column cell.
-
-\end{enumerate}
+  where n is the current row.  \label{item:proc7}
+\item Change an A column cell.  \label{item:proc8}
+\end{compactenum}
 
 The researcher used a Groovy script with the argument .25 to generate the random
-numbers used to seed the functions of the spreadsheet.  For source
-see Listing~\ref{randomSourceGen.groovy} in Appendix~\ref{sourceCode}.
+numbers used to seed the functions of the spreadsheet.  For source see
+\emph{Listing}~\ref{randomSourceGen.groovy} in \emph{Appendix}~\ref{sourceCode}.
 
 \subsection{Delimitations}
 
 %Suggestions for future research?
 
 Generalization would be difficult because only Intel Core Duo and Atom
-processors were being tested.  Also, a single broadband Internet connection was
-used to conduct the testing so speed differences have not been fully explored.
+processors were tested.  Also, a single broadband Internet connection was used
+to conduct the testing so speed differences have not been fully explored.
 Different office suites such as Microsoft Office and iWork offer different
 performance characteristics and only one has been explored.  However, none of
-these considerations should overly affect the ability to generalize.  Most of
-today's mobile machines use processors with very similar performance
-characteristics and office suites also are becoming indistinguishable.
+these considerations should overly affect the ability to generalize across
+machines of comparable hardware characteristics.
 
 It is impossible to prove the generalization of this research because there was
 not enough time or resources to truly test on varied hardware and over various
-connection.  That being said, there is no reason why the outcomes of the testing
-would vary too widely across multiple mobile platforms.  Also, performance
-testing was somewhat arbitrary as actual process sampling could not be
-accomplished.  Instead, observation alone was used in conjunction with the
+connections.  However, the researcher cannot determine any reasons why the
+outcomes of the testing would vary too widely across multiple mobile platforms.
+Also, performance testing lacked precision as actual process sampling could not
+be accomplished.  Instead, observation alone was used in conjunction with the
 system monitoring applications of the respective operating systems.
-
-Limitations in the Google Docs platform constrained the size of the testing
-spreadsheet greatly.  A different service could be used to get a more realistic
-baseline for cloud versus local performance comparison.
-
-Only two platforms, a single browser, and a single office suite were tested on,
-albeit across multiple platforms.  More hardware and software configurations
-could be tested to help validate the generalization of the research conclusions.
 
 \subsection{Results}
 
+In this section the author will document the results based on the process
+outlined in \emph{section}~\ref{sec:proc} on \emph{page}~\pageref{sec:proc}.  First, the
+author will examine the results of following the process in Google Chrome.
+
 On the MacBook in Google Chrome, creation of the spreadsheet from the source
 file took an average of 6 seconds based on ten trial uploads on the MacBook in
-Google Chrome. Creation of the second column took an average of 3 seconds. The
-third column took significantly longer, averaging 25 seconds. Data can be found
-in Table~\ref{mbChromePerf} on page~\pageref{mbChromePerf}.
+Google Chrome.  Creation of the second column where the initial number between
+-1 and 1 is multiplied by 10 and increased by 1 through a formula fill took an
+average of 3 seconds.  The third column where successively larger medians are
+taken based on the current row took significantly longer, averaging 25 seconds.
+Data can be found in \emph{Table}~\ref{mbChromePerf} on \emph{page}~\pageref{mbChromePerf}.
+No CPU usage was observed during the creation of these columns except when the
+new data had to be displayed.
 
 \input{table.mbChromePerf.tex}
 
-The problem seemed to be filling the formula down on the entire column.  Google
-Spreadsheet appears to be unable to handle large column selections without
-freezing.  The researcher was unable to ascertain why this would be.  No CPU
-usage of note was observed and no network traffic to speak of.  On occasion
-after half an hour or so the page would refresh and the data would be there, but
-more often than not it simply would never show up.
-
-Creating the 3 columns needed to calculate percentiles was uninteresting.  Each
-task averaged less than 1 second over 10 runs.
+Creating the 3 columns corresponding to Steps 5--7 needed to calculate
+percentiles was uninteresting.  Each task averaged less than 1 second over 10
+runs.
 
 As was expected, performance was extremely comparable on the ASPIRE one when
-using Chrome. See Table~\ref{aspChrPerf} on page~\pageref{aspChrPerf}.
+using Chrome.  While there was a slight performance degradation, time to
+complete the various tasks was almost identical to completing them on the
+MacBook.  See \emph{Table}~\ref{aspChrPerf} on \emph{page}~\pageref{aspChrPerf}.
 
 \input{table.aspChrPerf.tex}
 
-Creating the 3 columns needed to calculate percentiles remained uninteresting.
-
-As an aside: while no significant difference at all was observed between the
-two platforms' ability to compute the calculations demanded by the spreadsheet,
-significant differences were observed in the performance associated with
-changing the display of the data.  It appears that Google offloads most of the
-data into memory and relies on local calculations to redisplay the data in the
-window.  With the weaker CPU and Memory set, the Netbook saw performance losses
-due to that.
-
-At the sampling size Google Docs could handle before becoming unusable, creating
-each of the columns of the Spreadsheet was instantaneous \emph{on both
-  platforms}.  This was very surprising to the researcher although in retrospect
-it should not have been.  At that sample size, no local spreadsheet system has
-issues.  The researcher obtained a much larger spreadsheet\footnote{A testing
-  spreadsheet for use with OpenOffice.org bug 89976
+At the sampling size Google Docs could handle before becoming unusable which was
+around the size of the sample spreadsheet (3,000 data cells, 6,300 formula
+cells), creating each of the columns of the Spreadsheet was instantaneous
+\emph{on both platforms}.  The researcher obtained a much larger
+spreadsheet\footnote{A testing spreadsheet for use with OpenOffice.org bug 89976
   \url{http://j.mp/cmscu498OOoSs}} which allowed a much closer comparison of the
 two platforms and as expected the netbook performed far worse than the notebook;
-actually an \emph{order of magnitude} worse. See Table~\ref{ooCp} on
-page~\pageref{ooCp}.
+actually an \emph{order of magnitude} worse.  A different process had to be used
+since the spreadsheet was already created.  The times measured were for opening
+the spreadsheet which initiated an initial computation of the entire
+Spreadsheet.  See \emph{Table}~\ref{ooCp} on \emph{page}~\pageref{ooCp}.
 
 \input{table.ooCp.tex}
-
-These results are not very arbitrary but they are purely based on observation
-which means that future researchers will come up with slightly different
-results.  The results are demonstrated for verification by the tables of
-performance data included in this text
-
-Based on the above performance data, the following specifications are believed
-to be an ideal mobile computer designed to maximize battery life and performance
-when accessing the cloud.
-
-The processor could be inexpensive and weak as during the utilization of the
-Google Docs Spreadsheet neither machine's CPU usage went above 5\% during
-calculations.  By intentionally downgrading the CPU, load on the battery would
-be reduced.  This could be reduced even further by the addition of a specialized
-GPU that was optimized for the display of web graphics would help the overall
-performance as the biggest hit on the processor was during the redisplay of
-data.
-
-For storage, a small flash card or SIM chip could be used in place of
-traditional hard disks.  This would be used to store the browser and minimal OS
-needed to utilize the Cloud Service and would minimize the need to spin up, spin
-down, and otherwise manage a physical disk.  No disk access was required during
-the running of the performance tests, but utilizing Hibernate between sessions
-would be much less battery intensive with the ability to simply write the
-contents of memory to a flash disk.
-
-Maintaining a small screen size for the mobile device helps greatly with the
-battery expectancy but a higher density screen would be desirable.  This way
-higher complexity web applications could be utilized comfortably without
-sacrificing battery performance.  Another option would be to implement in
-hardware the ability to zoom out and in.  This way low density screens could be
-used which would boost battery performance slightly without sacrificing
-usability.
-
-A specialized OS and Browser could be developed for this system.  While doing
-nothing on both machines the OS alone consumed 1--2\% of available CPU power.
-Reducing that to 0 would help with battery life and increase the responsiveness
-of the various web applications being utilized.
