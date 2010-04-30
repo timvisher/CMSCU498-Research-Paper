@@ -9,8 +9,7 @@ The author assumes the reader has knowledge of:
 \item various aspects of hardware performance, especially those associated with
   inter-charge mobile life expectancy;
 \item Cloud Services and how they are used;
-\item the offerings available currently in today's mobile
-  computing environment.
+\item the offerings available currently in today's mobile computing environment.
 \end{inparaenum}
 
 The problem that this research project is addressing focuses on the fact that
@@ -39,8 +38,8 @@ The research questions being addressed are as follows:
     applications.
 \end{inparaenum}
 
-The procedure that the researcher pursued for this project was split into 2 areas
-of investigation:
+The procedure that the researcher pursued for this project was split into 2
+areas of investigation:
 \begin{inparaenum}[(1)]
 \item ways that battery life can be maximized through demand management; and
 \item Netbook/Notebook performance comparability.
@@ -93,6 +92,7 @@ respectively.
 
 \subsection{Procedure/Methodology}
 
+\label{sec:proc}
 %Expected recipe
 
 The researcher used the following process to test the performance of Netbooks
@@ -100,23 +100,25 @@ and Notebooks using Google Docs Spreadsheet and its locally hosted counterpart
 OpenOffice.org Calc:
 
 \begin{compactenum}
-\item Create a source CSV file with ~3,000 random numbers between -1 and 1.
-\item Create a new spreadsheet based on the CSV file.
+\item Create a source CSV file with ~3,000 random numbers between -1 and
+  1.  \label{item:proc1}
+\item Create a new spreadsheet based on the CSV file.  \label{item:proc2}
 \item Create a new column and fill with the function =An*10+1 where n is the
-  current row.
+  current row.  \label{item:proc3}
 \item Create a new column and fill with the function =MEDIAN(B1:Bn) where n is
-  the current row.
-\item Create a new column and enter 1-100 in the first hundred rows.
+  the current row.  \label{item:proc4}
+\item Create a new column and enter 1-100 in the first hundred
+  rows.  \label{item:proc5}
 \item Create a new column and fill with the function =Dn/100 where n is the
-  current row.
+  current row.  \label{item:proc6}
 \item Create a new column and fill with the function =PERCENTILE(C1:C10004,En)
-  where n is the current row.
-\item Change an A column cell.
+  where n is the current row.  \label{item:proc7}
+\item Change an A column cell.  \label{item:proc8}
 \end{compactenum}
 
 The researcher used a Groovy script with the argument .25 to generate the random
-numbers used to seed the functions of the spreadsheet.  For source
-see Listing~\ref{randomSourceGen.groovy} in Appendix~\ref{sourceCode}.
+numbers used to seed the functions of the spreadsheet.  For source see
+Listing~\ref{randomSourceGen.groovy} in Appendix~\ref{sourceCode}.
 
 \subsection{Delimitations}
 
@@ -140,48 +142,43 @@ system monitoring applications of the respective operating systems.
 
 \subsection{Results}
 
+In this section the author will document the results based on the process
+outlined in section~\ref{sec:proc} on page \pageref{sec:proc}.  First, the
+author will examine the results of following the process in Google Chrome.
+
 On the MacBook in Google Chrome, creation of the spreadsheet from the source
 file took an average of 6 seconds based on ten trial uploads on the MacBook in
-Google Chrome. Creation of the second column took an average of 3 seconds. The
-third column took significantly longer, averaging 25 seconds. Data can be found
-in Table~\ref{mbChromePerf} on page~\pageref{mbChromePerf}.
+Google Chrome.  Creation of the second column where the initial number between
+-1 and 1 is multiplied by 10 and increased by 1 through a formula fill took an
+average of 3 seconds.  The third column where successively larger medians are
+taken based on the current row took significantly longer, averaging 25 seconds.
+Data can be found in Table~\ref{mbChromePerf} on page~\pageref{mbChromePerf}.
+No CPU usage was observed during the creation of these columns except when the
+new data had to be displayed.
 
 \input{table.mbChromePerf.tex}
 
-The problem seemed to be filling the formula down on the entire column.  Google
-Spreadsheet appears to be unable to handle large column selections without
-freezing.  The researcher was unable to ascertain why this would be.  No CPU
-usage of note was observed and no network traffic to speak of.  On occasion
-after half an hour or so the page would refresh and the data would be there, but
-more often than not it simply would never show up.
-
-Creating the 3 columns needed to calculate percentiles was uninteresting.  Each
-task averaged less than 1 second over 10 runs.
+Creating the 3 columns corresponding to Steps 5--7 needed to calculate
+percentiles was uninteresting.  Each task averaged less than 1 second over 10
+runs.
 
 As was expected, performance was extremely comparable on the ASPIRE one when
-using Chrome. See Table~\ref{aspChrPerf} on page~\pageref{aspChrPerf}.
+using Chrome.  While there was a slight performance degradation, time to
+complete the various tasks was almost identical to completing them on the
+MacBook.  See Table~\ref{aspChrPerf} on page~\pageref{aspChrPerf}.
 
 \input{table.aspChrPerf.tex}
 
-Creating the 3 columns needed to calculate percentiles remained uninteresting.
-
-As an aside: while no significant difference at all was observed between the
-two platforms' ability to compute the calculations demanded by the spreadsheet,
-significant differences were observed in the performance associated with
-changing the display of the data.  It appears that Google offloads most of the
-data into memory and relies on local calculations to redisplay the data in the
-window.  With the weaker CPU and Memory set, the Netbook saw performance losses
-due to that.
-
-At the sampling size Google Docs could handle before becoming unusable, creating
-each of the columns of the Spreadsheet was instantaneous \emph{on both
-  platforms}.  This was very surprising to the researcher although in retrospect
-it should not have been.  At that sample size, no local spreadsheet system has
-issues.  The researcher obtained a much larger spreadsheet\footnote{A testing
-  spreadsheet for use with OpenOffice.org bug 89976
+At the sampling size Google Docs could handle before becoming unusable which was
+around the size of the sample spreadsheet (3,000 data cells, 6,300 formula
+cells), creating each of the columns of the Spreadsheet was instantaneous
+\emph{on both platforms}.  This was very surprising to the researcher although
+in retrospect it should not have been.  At that sample size, no local
+spreadsheet system has issues.  The researcher obtained a much larger
+spreadsheet\footnote{A testing spreadsheet for use with OpenOffice.org bug 89976
   \url{http://j.mp/cmscu498OOoSs}} which allowed a much closer comparison of the
 two platforms and as expected the netbook performed far worse than the notebook;
-actually an \emph{order of magnitude} worse. See Table~\ref{ooCp} on
+actually an \emph{order of magnitude} worse.  See Table~\ref{ooCp} on
 page~\pageref{ooCp}.
 
 \input{table.ooCp.tex}
