@@ -1,45 +1,81 @@
 \section{Discussion}
 
-In general, the researcher was amazed to find that Google Docs is virtually
-unusable in its present form for spreadsheets of any reasonabel size.  While
-taking on almost no CPU usage locally at all, it still took large amounts of
-time to enter formulas and calculate their values for a relatively small set
-(3,000) of data points.  Compared to OpenOffice.org on either platform, this was
-extremely slow.  Interestingly enough, CPU and Bandwidth did not seem to play a
-factor in Google Docs performance.  The researcher's only guess is that the way
-they allocate computing resources at Google isn't optimized for response time.
+In general, the researcher found that Google Docs is virtually unusable in its
+present form for spreadsheets of any reasonable size.  While consuming almost no
+CPU usage locally, it still took large amounts of time to enter formulas and
+calculate their values for a relatively small set (3,000) of data points.
+Compared to OpenOffice.org on either platform, this was extremely slow.
+Interestingly enough, CPU and Bandwidth did not seem to play a factor in Google
+Docs performance.  The researcher was unable to ascertain why this is the case.
+Further research would be required to discover why.
 
 %%\section{Was the original question answered? This should be a simple statement
 %%of the support or lack of support of the original question in the
 %%introduction}
 
-The original question was answered.  Due to the research into the performance of
-batteries for mobile platforms and the researcher's performance testing
-regarding utilizing cloud services with different mobile platforms, the
-researcher was able to ascertain a direction in which developers of mobile
-platforms should head in order to meet the demands of todays mobile computing
-customers.  Specifically, very low CPU power was needed to do complex
-calculations via a cloud service on either of the mobile platforms tested on.
-Because the power requirements are so low to do computation on another machine,
-a computer could be designed that did nothing but offload its computational
-requirements to another machine and simply displayed the data that came back.
-While dumb terminals meet some of the demands of this ideal mobile platform,
-they are not mobile and they are not designed to be.  The ideal mobile platform
-would be a mobile mostly-dumb terminal that could perform extremely basic tasks
-locally (manipulating the display of data in memory, creating small text
-documents that could exist in memory until synced with the cloud, etc.) while
-requiring that almost all disk access and computation be done in the cloud.  A
-breakthrough would have to be discovered in display technology as currently the
-largest drawer of power in any mobile platform is the display device.
+Due to the research into the performance of batteries for mobile platforms and
+the researcher's performance testing regarding utilizing cloud services with
+different mobile platforms, the researcher was able to ascertain a direction in
+which developers of mobile platforms could head in order to meet the demands of
+todays mobile computing customers.  Specifically, very low CPU power was needed
+to do complex calculations via a cloud service on either of the mobile platforms
+tested on.  Because the power requirements are so low for the local machine when
+performing computation on another machine, a computer could be designed that did
+nothing but offload its computational requirements to another machine and
+display the data that came back.  While dumb terminals meet some of the demands
+of this ideal mobile platform, they are not mobile and they are not designed to
+be.  The ideal mobile platform would be a mobile mostly-dumb terminal that could
+perform extremely basic tasks locally (manipulating the display of data in
+memory, creating small text documents that could exist in memory until synced
+with the cloud, etc.) while requiring that almost all disk access and
+computation be done in the cloud.  A breakthrough in display technology energy
+efficiency needs to be discovered as currently the largest drawer of power in
+any mobile platform is the display device.
+
+Specifically, based on the performance data, the following specifications are
+believed to be an ideal mobile computer designed to maximize battery life and
+performance when accessing the cloud.
+
+Because neither machine's CPU usage went above 5\% during the utilization of the
+Google Docs Spreadsheet for calculations, the processor could be more
+inexpensive and weak even than the Atom Processor in the Netbook.  By
+intentionally downgrading the CPU, load on the battery would be reduced.  This
+could be reduced even further by the addition of a specialized GPU that was
+optimized for the display of web graphics would help the overall performance as
+the biggest hit on the processor was during the redisplay of data.
+
+For storage, a small flash card or SIM chip could be used in place of
+traditional hard disks.  This would be used to store the browser and minimal OS
+needed to utilize the Cloud Service and would minimize the need to spin up, spin
+down, and otherwise manage a physical disk.  No disk access was required during
+the running of the performance tests, but utilizing an aggressive Hibernate
+schedule between sessions would be much less battery intensive with the ability
+to simply write the contents of memory to a flash disk.  Obviously, it isn't
+possible to use the computer while it is in Hibernate mode, but it does allow
+the battery to last longer between uses.
+
+Maintaining a small screen size for the mobile device helps greatly with the
+battery expectancy but a higher density screen would be desirable.  This way
+higher complexity web applications could be utilized comfortably without
+sacrificing battery performance.  Another option would be to implement in
+hardware the ability to zoom out and in.  This way low density screens could be
+used which would boost battery performance slightly without sacrificing
+usability.
+
+A specialized OS and Browser could be developed for this system.  While doing
+nothing on both machines the OS alone consumed 1--2\% of available CPU power.
+Reducing idle time CPU usage to 0\% would help with battery life and increase
+the responsiveness of the various web applications being utilized.
 
 %%\section{Nonstatistical arguments for the generality of the findings?}
 
-These findings are general because there are not large differences between the
-computers tested on and any other computers on the market today in the space
-that was being investigated.  Most machines use LCD displays that have varying
+These suggestions for the design of ultra-mobile PCs because they are based on
+the performance data collected and there are not large local performance
+differences between the computers tested on and any other computers on the
+market using similar hardware.  Most machines use LCD displays that have varying
 brightness.  Wireless technology has basically standardized on 802.11 which has
 very similar power characteristics across the varying implementations
-(b/g/n/etc.).  In short, the differences between two netbooks and notebooks are
+(b/g/n/etc.).  In short, the differences between two Netbooks and Notebooks are
 negligible when discussing cloud service performance.  The two are only
 obviously different, as proved by the performance tests, when performing work
 locally.
@@ -48,15 +84,16 @@ locally.
 %% \section{Answer the question “so the procedure produced these results - so
 %% what?” What additional relevance was there?}
 
-The findings are meaningful because they do lead to a better design for mobile
-platforms.  They show that a primary breakthrough (other than battery capacity)
-that is needed before mobile computing will become commonplace is display
-technologies that consume less power, the display being the most consumputive
-component of mobile platforms.  Also, a focussing on the paring down of local
-computation in favor of the utilization of cloud services could be used to
+The findings are meaningful because they do suggest a better design for mobile
+platforms.  They show a primary breakthrough that is needed before mobile
+computing will become commonplace (other than battery capacity) is display
+technologies that consume less power.  Also, a focusing on the paring down of
+local computation in favor of the utilization of cloud services could be used to
 extend battery life and thus allow for larger and more consumptive displays.
-This would require a sophistication of efforts regarding the volution of
-broadband Internet access to ensure that performance is what users have come to
-expect when compared with desktop and traditional mobile devices.  These
-realizations should aid in the development of a mobile platform designed for
-today's world.
+This would require a sophistication of efforts regarding the ability of
+broadband Internet access providers to ensure that performance is what users
+have come to expect when compared with desktop and traditional mobile devices as
+far as interactivity goes.  These realizations could aid in the development of a
+mobile platform designed for today's world.
+
+
