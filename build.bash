@@ -16,6 +16,7 @@ mkdir build/latex
 find . -name '*.tex'  -exec cp '{}' build/latex/ \;
 find . -name '*.bib' -exec cp '{}' build/latex/ \; -print
 find . -name '*.groovy' -exec cp '{}' build/latex/ \;
+cp redgrif.png build/latex/
 
 #LaTeX
 cd build/latex
