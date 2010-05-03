@@ -13,17 +13,13 @@ mkdir build
 mkdir build/latex
 
 #move required files in
-find . -name '*.tex'  -exec cp '{}' build/latex/ \;
-find . -name '*.bib' -exec cp '{}' build/latex/ \; -print
-find . -name '*.groovy' -exec cp '{}' build/latex/ \;
-cp redgrif.png build/latex/
+find . \( -name '*.tex' -o -name '*.bib' -o -name '*.groovy' -o -name '*.png' -o -name '*.jpg' \)  -exec cp '{}' build/latex/ \;
 
 #LaTeX
 cd build/latex
-latex $TEX_FILE.tex 2>/dev/null
-latex $TEX_FILE.tex 2>/dev/null
+pdflatex $TEX_FILE.tex 2>/dev/null
+pdflatex $TEX_FILE.tex 2>/dev/null
 bibtex $TEX_FILE.aux
-latex $TEX_FILE.tex 2>/dev/null
 pdflatex $TEX_FILE.tex
 mv $TEX_FILE.pdf ../
 
