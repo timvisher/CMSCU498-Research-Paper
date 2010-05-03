@@ -28,7 +28,7 @@ pdflatex $TEX_FILE.tex
 mv $TEX_FILE.pdf ../
 
 if type open ; then
-    open ../$TEX_FILE.pdf;
+    open -a "/Applications/Adobe Acrobat 9 Pro/Adobe Acrobat Pro.app" ../$TEX_FILE.pdf;
 fi
 
 if [ ! -d ../../distro ] ; then
