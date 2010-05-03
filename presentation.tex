@@ -12,6 +12,7 @@
 \usepackage{graphicx}
 \usepackage{times}
 \usepackage[T1]{fontenc}
+\usepackage{tabularx}
 
 \title{Cloud Computing and the Ideal Mobile Platform}
 \subtitle{How the advent of Cloud Computing might affect computers designed for
@@ -222,7 +223,97 @@
 
 \subsection[GDocs Spreadsheet Testing]{Google Docs Spreadsheet Torture Test}
 
-\begin{frame}{Make Titles Informative.}
+\begin{frame}{Harware Specs}
+  \resizebox{10cm}{!} {
+  \begin{tabular}{| r | p{5cm} | p{5cm} |}
+    \hline
+                          & MacBook          & acer ASPIRE one   \\ \hline
+    Processor Name        & Intel Core Duo   & Intel Atom N270   \\ \hline
+    Processor Speed       & 1.83 GHz         & 1.60 GHz          \\ \hline
+    Number Of Processors  & 1                & 1                 \\ \hline
+    Total Number Of Cores & 2                & 1                 \\ \hline
+    Operating System      & Mac OS X 10.6.3  & Windows XP HE SP3 \\ \hline
+    \hline
+  \end{tabular}
+}
+\end{frame}
+
+\begin{frame}{Software Specs}
+  \resizebox{10cm}{!} {
+  \begin{tabular}{| r | p{5cm} | p{5cm} |}
+    \hline
+                                 & MacBook     & acer ASPIRE one \\ \hline
+    Google Chrome                & 5.0.342.9                    & 4.1.249.1045 (42898)               \\ \hline
+    OpenOffice.org               & 3.2.0 OOO320m12 (Build:9483) & 3.2.0 OOO320m12 (Build:9483)       \\
+    \hline
+  \end{tabular}
+}
+\end{frame}
+
+\begin{frame}{The Process}
+  \begin{itemize}
+  \item Let the show begin\dots
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{MacBook Performance}
+  \begin{tabularx}{275pt}{| c | X | X | X |}
+    \hline
+    & \multicolumn{3}{c|}{Time to complete steps in seconds} \\ \hline
+    Run      & Step 1 & Step 2 & Step 3 \\ \hline
+    1        & 8      & 2      & 30     \\ \hline
+    2        & 7      & 3      & 17     \\ \hline
+    3        & 5      & 4      & 24     \\ \hline
+    4        & 6      & 3      & 23     \\ \hline
+    5        & 6      & 2      & 29     \\ \hline
+    6        & 4      & 5      & 28     \\ \hline
+    7        & 5      & 2      & 30     \\ \hline
+    8        & 6      & 2      & 19     \\ \hline
+    9        & 6      & 3      & 20     \\ \hline
+    10       & 7      & 3      & 23     \\ \hline
+    Average  & 6      & 2.9    & 24.3   \\
+    \hline
+  \end{tabularx}
+\end{frame}
+
+\begin{frame}{ASPIRE one Performance}
+  \begin{tabularx}{275pt}{| c | X | X | X |}
+    \hline
+    & \multicolumn{3}{c|}{Time to complete steps in seconds} \\ \hline
+    Run          & Step 1 & Step 2 & Step 3 \\ \hline
+    1            & 8      & 2      & 17     \\ \hline
+    2            & 7      & 3      & 30     \\ \hline
+    3            & 5      & 2      & 23     \\ \hline
+    4            & 6      & 3      & 30     \\ \hline
+    5            & 7      & 4      & 20     \\ \hline
+    6            & 9      & 5      & 24     \\ \hline
+    7            & 3      & 2      & 29     \\ \hline
+    8            & 10     & 3      & 22     \\ \hline
+    9            & 6      & 3      & 30     \\ \hline
+    10           & 7      & 4      & 23     \\ \hline
+    Average      & 6.8    & 3.1    & 24.8   \\
+    \hline
+  \end{tabularx}
+\end{frame}
+
+\begin{frame}{OpenOffice.org Large Spreadsheet Performance}
+  \begin{tabularx}{300pt}{| c | X | X |}
+    \hline
+    & \multicolumn{2}{c|}{Time to complete opening in seconds} \\ \hline
+    Run               & Notebook & Netbook    \\ \hline
+    1                 & 134      & 1800       \\ \hline
+    2                 & 129      & 1738       \\ \hline
+    3                 & 144      & 1721       \\ \hline
+    4                 & 111      & 1983       \\ \hline
+    5                 & 119      & 1699       \\ \hline
+    6                 & 128      & 1738       \\ \hline
+    7                 & 145      & 1715       \\ \hline
+    8                 & 133      & 1817       \\ \hline
+    9                 & 129      & 1876       \\ \hline
+    10                & 125      & 1743       \\ \hline
+    Average Times     & 129.7    & 1783       \\
+    \hline
+  \end{tabularx}
 \end{frame}
 
 \section*{Summary}
@@ -230,7 +321,7 @@
 \begin{frame}{Summary}
 
 \begin{itemize}
-  \item The \alert{first main message} of your talk in one or two lines.
+  \item An ideal mobile platform?
   \item The \alert{second main message} of your talk in one or two lines.
   \item Perhaps a \alert{third message}, but not more than that.
 \end{itemize}
