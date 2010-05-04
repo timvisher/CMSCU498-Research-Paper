@@ -42,7 +42,6 @@
 
 \begin{frame}{Outline}
 \tableofcontents[pausesections]
-% You might wish to add the option [pausesections]
 \end{frame}
 
 % Since this a solution template for a generic talk, very little can
@@ -85,7 +84,7 @@
     \column{5cm}
       \begin{itemize}
       \item Client/Server
-      \item What is it?
+      \item Architecture
       \end{itemize}
   \end{columns}
 \end{frame}
@@ -124,45 +123,27 @@
 \subsection{Cloud Computing}
 
 \begin{frame}{History}
-  \begin{itemize}
-  \item Roots
-  \item Amazon
-  \item Broadband
-  \end{itemize}
+\begin{columns}
+  \column{5cm}
+    \includegraphics[width=5cm]{cloudComputing.jpg}
+  \column{5cm}
+    \begin{itemize}
+    \item Roots
+    \item Amazon
+    \item Broadband
+    \end{itemize}
+\end{columns}
 \end{frame}
 
 \begin{frame}{Web 2.0}
-  \begin{itemize}
-  \item Tim O'Reilly
-  \item Ethos
-  \item Examples
-  \end{itemize}
-\end{frame}
-
-\subsection{Netbooks and Ultra-Mobile PCs}
-
-\begin{frame}{History}
   \begin{columns}
     \column{5cm}
-      \includegraphics[width=5cm]{olpc.jpg}
+      \includegraphics[width=5cm]{web20memeMap.jpg}
     \column{5cm}
       \begin{itemize}
-      \item Intel %% Paul Bergevin, 2008
-      \item The First Netbook
-      \item Drivers
-      \end{itemize}
-  \end{columns}
-\end{frame}
-
-\begin{frame}{Qualifications}
-  \begin{columns}
-    \column{5cm}
-      \includegraphics[width=5cm]{netbookSpecs.jpg}
-    \column{5cm}
-      \begin{itemize}
-      \item Small
-      \item Cheap
-      \item Depend on the Net
+      \item Tim O'Reilly
+      \item Ethos
+      \item Examples
       \end{itemize}
   \end{columns}
 \end{frame}
@@ -176,7 +157,7 @@
     \column{5cm}
       \begin{itemize}
       \item Prior Art
-      \item Exxon % M. S. Whittingham, 1976
+      \item M. S. Whittingham
       \item Safety
       \end{itemize}
   \end{columns}
@@ -197,6 +178,34 @@
   \begin{itemize}
   \item Nano Technology
   \end{itemize}
+\end{frame}
+
+\subsection{Netbooks and Ultra-Mobile PCs}
+
+\begin{frame}{History}
+  \begin{columns}
+    \column{5cm}
+    \includegraphics[width=5cm]{olpc.jpg}
+    \column{5cm}
+    \begin{itemize}
+    \item Intel %% Paul Bergevin, 2008
+    \item The First Netbook
+    \item Drivers
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Qualifications}
+  \begin{columns}
+    \column{5cm}
+    \includegraphics[width=5cm]{netbookSpecs.jpg}
+    \column{5cm}
+    \begin{itemize}
+    \item Small
+    \item Cheap
+    \item Depend on the Net
+    \end{itemize}
+  \end{columns}
 \end{frame}
 
 \section[Research Project]{The Project: Mobile Hardware Using Cloud Services}
@@ -233,6 +242,12 @@
 
 \subsection[GDocs Spreadsheet Testing]{Google Docs Spreadsheet Torture Test}
 
+\begin{frame}{Performance Testing}
+  \begin{itemize}
+  \item In General
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{Harware Specs}
   \resizebox{10cm}{!} {
   \begin{tabular}{| r | p{5cm} | p{5cm} |}
@@ -266,44 +281,49 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{MacBook Performance}
-  \begin{tabularx}{275pt}{| c | X | X | X |}
-    \hline
-    & \multicolumn{3}{c|}{Time to complete steps in seconds} \\ \hline
-    Run      & Step 1 & Step 2 & Step 3 \\ \hline
-    1        & 8      & 2      & 30     \\ \hline
-    2        & 7      & 3      & 17     \\ \hline
-    3        & 5      & 4      & 24     \\ \hline
-    4        & 6      & 3      & 23     \\ \hline
-    5        & 6      & 2      & 29     \\ \hline
-    6        & 4      & 5      & 28     \\ \hline
-    7        & 5      & 2      & 30     \\ \hline
-    8        & 6      & 2      & 19     \\ \hline
-    9        & 6      & 3      & 20     \\ \hline
-    10       & 7      & 3      & 23     \\ \hline
-    Average  & 6      & 2.9    & 24.3   \\
-    \hline
-  \end{tabularx}
-\end{frame}
-
-\begin{frame}{ASPIRE one Performance}
-  \begin{tabularx}{275pt}{| c | X | X | X |}
-    \hline
-    & \multicolumn{3}{c|}{Time to complete steps in seconds} \\ \hline
-    Run          & Step 1 & Step 2 & Step 3 \\ \hline
-    1            & 8      & 2      & 17     \\ \hline
-    2            & 7      & 3      & 30     \\ \hline
-    3            & 5      & 2      & 23     \\ \hline
-    4            & 6      & 3      & 30     \\ \hline
-    5            & 7      & 4      & 20     \\ \hline
-    6            & 9      & 5      & 24     \\ \hline
-    7            & 3      & 2      & 29     \\ \hline
-    8            & 10     & 3      & 22     \\ \hline
-    9            & 6      & 3      & 30     \\ \hline
-    10           & 7      & 4      & 23     \\ \hline
-    Average      & 6.8    & 3.1    & 24.8   \\
-    \hline
-  \end{tabularx}
+\begin{frame}{Chrome/GDocs Performance}
+  \begin{columns}
+    \column{5cm}
+    \resizebox{5cm}{!} {
+    \begin{tabularx}{275pt}{| c | X | X | X |}
+      \hline
+      & \multicolumn{3}{c|}{MacBook steps in seconds} \\ \hline
+      Run      & Step 1 & Step 2 & Step 3 \\ \hline
+      1        & 8      & 2      & 30     \\ \hline
+      2        & 7      & 3      & 17     \\ \hline
+      3        & 5      & 4      & 24     \\ \hline
+      4        & 6      & 3      & 23     \\ \hline
+      5        & 6      & 2      & 29     \\ \hline
+      6        & 4      & 5      & 28     \\ \hline
+      7        & 5      & 2      & 30     \\ \hline
+      8        & 6      & 2      & 19     \\ \hline
+      9        & 6      & 3      & 20     \\ \hline
+      10       & 7      & 3      & 23     \\ \hline
+      Average  & 6      & 2.9    & 24.3   \\
+      \hline
+    \end{tabularx}
+}
+    \column{5cm}
+    \resizebox{5cm}{!}{
+    \begin{tabularx}{275pt}{| c | X | X | X |}
+      \hline
+      & \multicolumn{3}{c|}{ASPIRE steps in seconds} \\ \hline
+      Run          & Step 1 & Step 2 & Step 3 \\ \hline
+      1            & 8      & 2      & 17     \\ \hline
+      2            & 7      & 3      & 30     \\ \hline
+      3            & 5      & 2      & 23     \\ \hline
+      4            & 6      & 3      & 30     \\ \hline
+      5            & 7      & 4      & 20     \\ \hline
+      6            & 9      & 5      & 24     \\ \hline
+      7            & 3      & 2      & 29     \\ \hline
+      8            & 10     & 3      & 22     \\ \hline
+      9            & 6      & 3      & 30     \\ \hline
+      10           & 7      & 4      & 23     \\ \hline
+      Average      & 6.8    & 3.1    & 24.8   \\
+      \hline
+    \end{tabularx}
+}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{OpenOffice.org Large Spreadsheet Performance}
